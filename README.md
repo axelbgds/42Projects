@@ -1,7 +1,7 @@
 # 42Projects
 
 <h1 align="center">
-	42 Learn to Code : [42 SChool](https://42.fr/en/homepage/) !
+	42 Learn to Code [42 SChool](https://42.fr/en/homepage/) !
 </h1>
 
 <p align="center">
