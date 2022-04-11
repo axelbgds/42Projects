@@ -7,8 +7,8 @@ Common core from school 42 Nice
 
 
 <p align="center">
-	<img src= "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2F42nice%2F&psig=AOvVaw2qN_u01sUMac2cVej-FvzW&ust=1649747143404000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCKCDspa5i_cCFQAAAAAdAAAAABAD" alt="Logo 42 Nice"/>
-  <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2F42.fr%2Fle-programme%2Fmethode-travail%2F&psig=AOvVaw3rMWqcu_pDv7bY2V2shhaG&ust=1649747099128000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCJCy7oK5i_cCFQAAAAAdAAAAABAH" alt="Common core 42"/>
+	<img src= "" alt="Logo 42 Nice"/>
+  <img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.6435-9/106758435_123856579363225_6302012847011059951_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=_dBWCqhtt6IAX-sdtIh&_nc_ht=scontent-cdg2-1.xx&oh=00_AT_3m3F4Z5nlFNe8wDFUhBwz0uK6zPVzYWLKyJMNelSlww&oe=627842C9" alt="Common core 42"/>
 </p>
 
 ## How It Works THE PROGRAM
