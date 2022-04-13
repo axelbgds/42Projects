@@ -11,8 +11,8 @@
 ## How It Works THE PROGRAM
 42 is a future-proof computer science training to educate the next generation of software engineers. The 42 program takes a project-based approach to progress and is designed to develop technical and people skills that match the expectations of the labor market.
 
-## Entrance exam : Pool 1 month
-00_Pool These exercises gather my work done during the 28 days of the 42 pool. Apart from my BSQ all the work is there, thanks to my efforts and my work during this one I could be accepted in the school after finishing. According to my logtime I worked an average of 10 hours.
+## Entrance exam : Pool during 1 month
+**00  Pool** These exercises gather my work done during the 28 days of the 42 pool. Apart from my BSQ all the work is there, thanks to my efforts and my work during this one I could be accepted in the school after finishing. According to my logtime I worked an average of 10 hours.
 
 ## Common Core Program
 
