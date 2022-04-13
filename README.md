@@ -16,7 +16,7 @@ These exercises gather my work done during the 28 days of the 42 pool. Apart fro
 
 ## Common Core Program
 
-<p align="right">
+<p align="center">
   <img src="https://static.wixstatic.com/media/154aad_28249b46a7c74649bbd6f9a0501d314d~mv2.png/v1/fill/w_740,h_404,al_c,q_90/154aad_28249b46a7c74649bbd6f9a0501d314d~mv2.webp" alt="Common core 42" width="700" />
 </p>
 
