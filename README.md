@@ -26,20 +26,20 @@ These exercises gather my work done during the 28 days in 42. All my work is the
 
 **02  ft_printf** (Not yet)
 
-**03  get_next_line** (Not yet)
+**02  get_next_line** (Not yet)
 
-**04  Born2beroot** (Not yet)
+**02  Born2beroot** (Not yet)
 
-**05  So_long** (Not yet)
+**03  So_long** (Not yet)
 
-**06  pipex** (Not yet)
+**03  pipex** (Not yet)
 
-**07  push_swap** (Not yet)
+**03  push_swap** (Not yet)
 
-**08  Philosophers** (Not yet)
+**04  Philosophers** (Not yet)
 
-**09  Minishell** (Not yet)
+**04  Minishell** (Not yet)
 
-**10  C++ Modules** (Not yet)
+**05  C++ Modules** (Not yet)
 
-**11  cub3D** (Not yet)
+**05  cub3D** (Not yet)
