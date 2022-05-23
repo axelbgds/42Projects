@@ -22,19 +22,19 @@ These exercises gather my work done during the 28 days in 42. All my work is the
 
 **00  Resources**
 
-**01  libft** (100%)
+**01  Libft** (100%)
 
-**02  ft_printf** (100%)
+**02  Ft_printf** (100%)
 
-**02  get_next_line** (Not yet)
+**02  Get_next_line** (Not yet)
 
 **02  Born2beroot** (100%)
 
 **03  So_long** (Not yet)
 
-**03  pipex** (Not yet)
+**03  Pipex** (Not yet)
 
-**03  push_swap** (Not yet)
+**03  Push_swap** (Not yet)
 
 **04  Philosophers** (Not yet)
 
@@ -42,4 +42,4 @@ These exercises gather my work done during the 28 days in 42. All my work is the
 
 **05  C++ Modules** (Not yet)
 
-**05  cub3D** (Not yet)
+**05  Cub3D** (Not yet)
