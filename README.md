@@ -43,3 +43,11 @@ These exercises gather my work done during the 28 days in 42. All my work is the
 **05  C++ Modules** (Not yet)
 
 **05  Cub3D** (Not yet)
+
+**05  Netpratice** (Not yet)
+
+**06  Containers** (Not yet)
+
+**06  Cub3D** (Not yet)
+
+**07  Transcendance** (Not yet)
