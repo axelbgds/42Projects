@@ -24,7 +24,7 @@ These exercises gather my work done during the 28 days in 42. All my work is the
 
 **01  libft** (100%)
 
-**02  ft_printf** (Not yet)
+**02  ft_printf** (100%)
 
 **02  get_next_line** (Not yet)
 
