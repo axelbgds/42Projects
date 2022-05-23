@@ -28,7 +28,7 @@ These exercises gather my work done during the 28 days in 42. All my work is the
 
 **02  get_next_line** (Not yet)
 
-**02  Born2beroot** (Not yet)
+**02  Born2beroot** (100%)
 
 **03  So_long** (Not yet)
 
