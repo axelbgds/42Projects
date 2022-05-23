@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.6435-9/106758435_123856579363225_6302012847011059951_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=_dBWCqhtt6IAX-sdtIh&_nc_ht=scontent-cdg2-1.xx&oh=00_AT_3m3F4Z5nlFNe8wDFUhBwz0uK6zPVzYWLKyJMNelSlww&oe=627842C9" alt="Common core 42" width="350"/>
+  <img src="https://42.fr/wp-content/uploads/2021/06/Group-8.png" alt="Common core 42" width="350"/>
 </p>
 
 ## How It Works THE PROGRAM
