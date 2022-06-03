@@ -26,7 +26,7 @@ These exercises gather my work done during the 28 days in 42. All my work is the
 
 **02  Ft_printf** (100%)
 
-**02  Get_next_line** (Not yet)
+**02  Get_next_line** (100%)
 
 **02  Born2beroot** (100%)
 
