@@ -6,10 +6,6 @@
 	<img src="https://user-images.githubusercontent.com/91064070/147373484-5f9d6a42-38d3-459b-89c3-24ea6e96c580.png?raw=true" alt="Sublime's custom image"/>
 </p>
 
-## Result
-
-![](result.png)
-
 ## Install
 
 ### Create your Virtual Machine using VirtualBox
