@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "  #Architecture: $(uname -a)"
+echo "  #CPU Physical: $(nproc)"
+echo "  #vCPU: $(grep processor /proc/cpuinfo | wc -l)"
+echo "  #Memory Usage: $(free --mega | awk 'NR==2 {printf "%d/%dMB (%.2f%%)", $3, $2, ($3 * 100) / $2}')"
+echo "  #Disk Usage: $(df | sed '1d' | awk '{tot_avail += $2} {tot_used += $3} END {printf "%.1f/%.1fGB (%.1f%%)", tot_used / 1000000, tot_avail / 1000000, (tot_used * 100) / tot_avail}')"
+echo "  #CPU Load: $(top -bn1 | tr -d '[:alpha:],' | awk 'NR==3 {printf "%.1f%%", 100 - $5 - $9}')" 
+echo "  #Last Boot: $(who -b | awk '{print $3, $4}')"
+echo "  #LVM Use: $([ $(lsblk | grep lvm | wc -l) == 0 ] && echo "no" || echo "yes")"
+echo "  #TCP Connections: $(ss -s | grep estab | awk '{printf "%d", $4}') ESTABLISHED"
+echo "  #User Log: $(who | cut -d ' ' -f 1 | sort -u | wc -l)"
+echo "  #Network: IP $(hostname -I)($(ip a | grep link/ether | awk '{print ($2)}'))"
+echo "  #Sudo: $(grep -c 'COMMAND' /var/log/sudo/logs) cmd"
