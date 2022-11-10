@@ -48,6 +48,4 @@ These exercises gather my work done during the 28 days in 42. All my work is the
 
 **06  Containers** (Not yet)
 
-**06  Cub3D** (Not yet)
-
 **07  Transcendance** (Not yet)
