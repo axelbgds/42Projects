@@ -1,45 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeaugra <abeaugra@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 14:59:25 by abeaugra          #+#    #+#             */
-/*   Updated: 2022/03/30 17:24:50 by abeaugra         ###   ########.fr       */
+/*   Created: 2022/03/21 15:10:19 by abeaugra          #+#    #+#             */
+/*   Updated: 2022/03/25 16:27:29 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*	Écrit l’entier ’n’ sur le descripteur de fichier
-*	donné.*/
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
-	{
-		if (n < 0)
-		{
-			ft_putchar_fd('-', fd);
-			n = n * -1;
-		}
-		if (n >= 9)
-		{
-			ft_putnbr_fd(n / 10, fd);
-		}
-		ft_putchar_fd((n % 10) + '0', fd);
-	}
-}
-
-/*
-int main (void)
-{
-	int nb = 7483648;
-	int fd;
-	ft_putnbr_fd(nb, fd);
-	return 0;
-}
+/*  The strlen() function computes the length 
+*   of the string s. The strnlen()function 
+*   attempts to compute the length of s, 
+*   but never scans beyond the first maxlen bytes of s
 */
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+/*
+int	main(void)
+{
+    char *s;
+    s = "Hello";
+    printf("%d\n", ft_strlen(s));
+    return (0);
+}*/

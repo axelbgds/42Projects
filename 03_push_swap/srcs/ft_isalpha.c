@@ -1,45 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeaugra <abeaugra@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 14:59:25 by abeaugra          #+#    #+#             */
-/*   Updated: 2022/03/30 17:24:50 by abeaugra         ###   ########.fr       */
+/*   Created: 2022/03/21 15:07:30 by abeaugra          #+#    #+#             */
+/*   Updated: 2022/03/24 14:38:42 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*	Écrit l’entier ’n’ sur le descripteur de fichier
-*	donné.*/
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
-	{
-		if (n < 0)
-		{
-			ft_putchar_fd('-', fd);
-			n = n * -1;
-		}
-		if (n >= 9)
-		{
-			ft_putnbr_fd(n / 10, fd);
-		}
-		ft_putchar_fd((n % 10) + '0', fd);
-	}
-}
-
 /*
-int main (void)
+** The ft_isalpha() function tests for any character for which isupper(3) or
+** islower(3) is true.  The value of the argument must be representable as an
+** unsigned char or the value of EOF.
+*/
+
+int	ft_isalpha(int c)
 {
-	int nb = 7483648;
-	int fd;
-	ft_putnbr_fd(nb, fd);
-	return 0;
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+		return (1);
+	return (0);
+}
+/*
+int main()
+{
+    printf("%d\n", ft_isalpha('w'));
+    printf("%d\n", isalpha('1'));
+    return 0;
 }
 */

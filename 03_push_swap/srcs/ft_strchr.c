@@ -1,40 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeaugra <abeaugra@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 16:50:45 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/02/08 14:25:24 by abeaugra         ###   ########.fr       */
+/*   Created: 2022/03/24 14:36:27 by abeaugra          #+#    #+#             */
+/*   Updated: 2022/03/30 16:24:58 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*	The strrchr() function is identical to strchr(), except 
-*	it locates the last occurrence of c.*/
+/*	The strchr() function locates the first occurrence of c 
+*	(converted to a char) in the string pointed to by s.
+*	The terminating null character is considered to be part 
+*	of the string; therefore if c is `\0', the functions 
+*	locate the terminating `\0'.*/
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	len;
+	int	i;
 
-	len = (int)ft_strlen(s);
-	while (len >= 0)
+	i = 0;
+	len = (int)ft_strlen(s) + 1;
+	while (i < len)
 	{
-		if (s[len] == (char)c)
-			return ((char *)(s + len));
-		len --;
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i++;
 	}
 	return (NULL);
 }
 /*
 int main () 
 {
-   const char str[] = "Diego de. la. Vega";
+	//check(ft_strchr(s, 0) == s + strlen(s)); showLeaks();
+   const char str[] = "Diego de. la .Vega";
    const char ch = '.';
    char *ret;
-   ret = ft_strrchr(str, ch);
+   ret = ft_strchr(str, ch);
    printf("String after |%c| is - |%s|\n", ch, ret);
    return(0);
 }*/

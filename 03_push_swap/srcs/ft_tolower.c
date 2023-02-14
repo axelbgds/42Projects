@@ -1,45 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeaugra <abeaugra@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 14:59:25 by abeaugra          #+#    #+#             */
-/*   Updated: 2022/03/30 17:24:50 by abeaugra         ###   ########.fr       */
+/*   Created: 2022/03/24 14:36:31 by abeaugra          #+#    #+#             */
+/*   Updated: 2022/03/24 15:19:03 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*	Écrit l’entier ’n’ sur le descripteur de fichier
-*	donné.*/
+/* 	The tolower() function converts an upper-case letter to the corresponding
+*	lower-case letter.  The argument must be representable as an unsigned char
+*	or the value of EOF.*/
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_tolower(int c)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
-	{
-		if (n < 0)
-		{
-			ft_putchar_fd('-', fd);
-			n = n * -1;
-		}
-		if (n >= 9)
-		{
-			ft_putnbr_fd(n / 10, fd);
-		}
-		ft_putchar_fd((n % 10) + '0', fd);
-	}
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
-
 /*
-int main (void)
+int main ()
 {
-	int nb = 7483648;
-	int fd;
-	ft_putnbr_fd(nb, fd);
-	return 0;
+	char c = 'T';
+	printf( "Result: %d\n", ft_tolower(c));
+    return (0);
 }
 */

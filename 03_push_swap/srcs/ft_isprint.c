@@ -1,45 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeaugra <abeaugra@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 14:59:25 by abeaugra          #+#    #+#             */
-/*   Updated: 2022/03/30 17:24:50 by abeaugra         ###   ########.fr       */
+/*   Created: 2022/03/21 15:10:14 by abeaugra          #+#    #+#             */
+/*   Updated: 2022/03/24 14:38:32 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*	Écrit l’entier ’n’ sur le descripteur de fichier
-*	donné.*/
+/* The isprint() function tests for any printing 
+ * character, including space (` ').  The value 
+ * of the argument must be representable as an 
+ * unsigned char or the value of EOF. */
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_isprint(int c)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
-	{
-		if (n < 0)
-		{
-			ft_putchar_fd('-', fd);
-			n = n * -1;
-		}
-		if (n >= 9)
-		{
-			ft_putnbr_fd(n / 10, fd);
-		}
-		ft_putchar_fd((n % 10) + '0', fd);
-	}
+	return (c >= 32 && c <= 126);
 }
-
 /*
 int main (void)
 {
-	int nb = 7483648;
-	int fd;
-	ft_putnbr_fd(nb, fd);
-	return 0;
-}
-*/
+	char c = '+';
+	printf("%d\n", ft_isprint(c));
+	return (0);
+}*/

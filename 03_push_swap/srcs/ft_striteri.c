@@ -1,45 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeaugra <abeaugra@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 14:59:25 by abeaugra          #+#    #+#             */
-/*   Updated: 2022/03/30 17:24:50 by abeaugra         ###   ########.fr       */
+/*   Created: 2022/03/28 14:39:29 by abeaugra          #+#    #+#             */
+/*   Updated: 2022/03/30 16:42:27 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*	Écrit l’entier ’n’ sur le descripteur de fichier
-*	donné.*/
+/*	Applique la fonction ’f’ à chaque caractère de la
+*	chaîne de caractères transmise comme argument,
+*	et en passant son index comme premier argument.
+*	Chaque caractère est transmis par adresse à ’f’
+*	afin d’être modifié si nécessaire.*/
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
-	{
-		if (n < 0)
-		{
-			ft_putchar_fd('-', fd);
-			n = n * -1;
-		}
-		if (n >= 9)
-		{
-			ft_putnbr_fd(n / 10, fd);
-		}
-		ft_putchar_fd((n % 10) + '0', fd);
-	}
-}
+	unsigned int	i;
 
-/*
-int main (void)
-{
-	int nb = 7483648;
-	int fd;
-	ft_putnbr_fd(nb, fd);
-	return 0;
+	if (!s || !f)
+		return ;
+	i = -1;
+	if (s)
+		while (s[++i])
+			f(i, &(*(s + i)));
 }
-*/

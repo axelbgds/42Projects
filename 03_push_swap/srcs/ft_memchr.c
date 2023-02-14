@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeaugra <abeaugra@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 16:50:45 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/02/08 14:25:24 by abeaugra         ###   ########.fr       */
+/*   Created: 2022/03/25 13:49:37 by abeaugra          #+#    #+#             */
+/*   Updated: 2022/03/29 16:04:39 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*	The strrchr() function is identical to strchr(), except 
-*	it locates the last occurrence of c.*/
+/* 	The memchr() function locates the first occurrence 
+*	of c (converted to an unsigned char) in string s.*/
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	len;
+	unsigned char	*str;
+	unsigned char	ucc;
 
-	len = (int)ft_strlen(s);
-	while (len >= 0)
-	{
-		if (s[len] == (char)c)
-			return ((char *)(s + len));
-		len --;
-	}
+	if (n == 0)
+		return (NULL);
+	str = (unsigned char *) s;
+	ucc = (unsigned char) c;
+	while (n--)
+		if (*str++ == ucc)
+			return (str - 1);
 	return (NULL);
 }
 /*
-int main () 
-{
-   const char str[] = "Diego de. la. Vega";
+int main () {
+   const char str[] = "Toto tata .mimi mama";
    const char ch = '.';
    char *ret;
-   ret = ft_strrchr(str, ch);
+
+   ret = ft_memchr(str, ch, strlen(str));
+
    printf("String after |%c| is - |%s|\n", ch, ret);
+
    return(0);
 }*/
