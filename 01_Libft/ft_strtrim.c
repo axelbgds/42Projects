@@ -56,10 +56,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res[i] = '\0';
 	return (res);
 }
-/*
-#include <stdio.h>
-int main (void)
-{
-	printf("%s\n",ft_strtrim("lorem ipsum dolor sit am", "dolorm"));
-	return(0);
-}*/

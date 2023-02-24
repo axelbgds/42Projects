@@ -22,11 +22,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-/*
-int main ()
-{
-	char c = 'T';
-	printf( "Result: %d\n", ft_tolower(c));
-    return (0);
-}
-*/

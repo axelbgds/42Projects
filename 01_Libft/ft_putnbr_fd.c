@@ -17,29 +17,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
-	{
-		if (n < 0)
-		{
-			ft_putchar_fd('-', fd);
-			n = n * -1;
-		}
-		if (n >= 9)
-		{
-			ft_putnbr_fd(n / 10, fd);
-		}
-		ft_putchar_fd((n % 10) + '0', fd);
-	}
-}
+	unsigned int	nb;
 
-/*
-int main (void)
-{
-	int nb = 7483648;
-	int fd;
-	ft_putnbr_fd(nb, fd);
-	return 0;
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb = -n;
+	}
+	else
+		nb = n;
+	if (nb > 9)
+		ft_putnbr_fd((nb / 10), fd);
+	nb = nb % 10 + 48;
+	ft_putchar_fd(nb, fd);
 }
-*/

@@ -63,17 +63,3 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * res);
 }
-/*
-int main () {
- 	printf("====ft_atoi====\n");
-	printf("%d\n%d\n%d\n%d\n%d\n%d\n",
-		ft_atoi("-283"), ft_atoi("  -+--283"), ft_atoi("283!20"), 
-			ft_atoi("283a30"), ft_atoi("a30"), ft_atoi("!@#"));
-	
-	printf("====atoi====\n");
-	printf("%d\n%d\n%d\n%d\n%d\n%d\n",
-		atoi("-283"), atoi("  -+--283"), atoi("283!20"),
-	      atoi("283a30"), atoi("a30"), atoi("!@#"));
-   
-   return(0);
-}*/

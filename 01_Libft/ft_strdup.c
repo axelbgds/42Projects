@@ -36,13 +36,3 @@ char	*ft_strdup(const char *s1)
 	result[index] = '\0';
 	return (result);
 }
-/*
-int main()
-{
-    char *p1 = "Biloute";
-    char *p2;
-    p2 = ft_strdup(p1);
- 
-    printf("Duplicated string is : %s", p2);
-    return (0);
-}*/

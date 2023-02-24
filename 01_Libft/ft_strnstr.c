@@ -43,18 +43,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-/*
-int 	main(int ac, char **av)
-{
-	char *s1 = av[1];
-	char *s2 = av[2];
-
-	if (ac == 3)
-	{
-		s1 = ft_strnstr(s1, s2, 3);
-		printf("%s\n", s2);
-	}
-	return (0);
-}
-*/

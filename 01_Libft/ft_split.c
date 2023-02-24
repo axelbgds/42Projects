@@ -78,17 +78,3 @@ char	**ft_split(char const *s, char c)
 	tab [i] = NULL;
 	return (tab);
 }
-/*
-int main ()
-{	
-	char **tab;
-	int i;
-	char *str;
-	
-	str = "Toto et tata fond dodo";
-	tab = ft_split(str, ' ');
-	i = 0;
-	while (tab[i++])
-		printf("%s\n", tab[i - 1]);
-	return(0);
-}*/

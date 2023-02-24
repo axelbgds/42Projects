@@ -39,12 +39,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dstlen + i] = '\0';
 	return (dstlen + srclen);
 }
-/*
-int main()
-{
-	char dst[100] = "1234";
-	char src[100] = "ABCD";
-	printf("%zu\n",ft_strlcat(dst, src, 7));
-	printf("%zu\n",ft_strlcat(dst, src, 2));
-	return(0);
-}*/

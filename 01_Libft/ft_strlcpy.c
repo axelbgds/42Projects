@@ -34,11 +34,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[cur] = 0;
 	return (ft_strlen(src));
 }
-/*
-int		main(void)
-{
-	char src[] = "Hello";
-	char dest[10];
-	printf("%lu\n", ft_strlcpy(dest, src, 6));
-	printf("%s\n", dest);
-}*/

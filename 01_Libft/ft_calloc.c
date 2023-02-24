@@ -32,15 +32,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		ft_bzero(ptr, res);
 	return (ptr);
 }
-/*
-int	main(void)
-{
-	printf("====ft_calloc====\n");
-	printf("%p\n", ft_calloc(5, 1));
-	printf("%ld\n", sizeof(ft_calloc(5, 1)));
-	
-	printf("====calloc====\n");
-	printf("%p\n", calloc(5, 1));
-	printf("%ld\n", sizeof(calloc(5, 1)));
-	return (0);
-}*/

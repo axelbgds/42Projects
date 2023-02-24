@@ -23,11 +23,3 @@ int	ft_toupper(int c)
 		return (c - 0x20);
 	return (c);
 }
-/*
-int main() 
-{
-    char c = 'a';
-	printf( "Result: %d\n", ft_toupper(c));
-    return (0);
-}
-*/
