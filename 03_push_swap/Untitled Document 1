@@ -1,0 +1,38 @@
+Je dois realiser un projet en langage C. Celui-ci me demande :
+La pile A est rempli de quelques entiers aléatoires (sans doublon) et B est vide. On peut effectuer certaines instructions sur ces piles, et le but est de trier tous ces entiers avec le moins d'instructions possible. Voici la liste des instructions que nous devons effectuer :
+- sa (swap a) : Échangez les deux premiers nombres dans A
+- sb (swap b) : Échangez les deux premiers chiffres de B
+- ss : sa + sb
+- ra (tourner a) : le numéro du haut dans A va au bas de A
+- rb (tourner b) : le nombre supérieur dans B va au bas de B
+- rr : ra + rb
+- rra (rotation inversée a) : le nombre inférieur dans A va au sommet de A
+- rra (rotation inversée b) : le nombre inférieur dans B va au sommet de B
+- rrr : rra + rrb
+- pa (appuyez sur a) : le numéro du haut dans B va en haut de A
+- pb (appuyez sur b) : le numéro du haut dans A va au sommet de B
+Voici à quoi cela devrait ressembler lorsque nos commandes lorsque nous exécutons notre programme dans le terminal :
+./push_swap 9 4 8 7 ou ./push_swap "9 4 8 7"
+sa
+pb
+rra
+pa
+Avec 3 chiffres, nous devons le trier avec pas plus de 3 instructions.
+Avec 5 chiffres, nous devons le trier avec pas plus de 12 instructions.
+Avec 100 nombres, on peut obtenir une liste d'instructions inférieure à 700
+Avec 500 numéros, on peut obtenir une liste des instructions inférieure à 5500
+Etape 1 : Realiser le parsing, mettre des nombres dans la pile A si aucune erreur n'est détectée.
+Etape 2 :  Vérifiez si les nombres en A sont tous triés. Si c'est le cas, terminez le programme sans rien imprimer. Utiliser une fonction A_is_sorted()
+Etape : Cree toute les fonctions de tri dans les liste chaines dans un fichier .c
+Etape : Cree toutes les erreurs de sorti
+Etape 3 : Si la taille de A ≤ 5, appelez la fonction sort_small_stack().
+Etape 4 : Appelez la fonction sort_big_stack() si la liste A > 5
+Etape 5 :
+Regles a prendre en compte : 
+utiliser uniquement des boucles while
+utiliser des appelle en fonction au maximum et ne pas les crees dans le int main
+En cas d’erreur, vous devez afficher "Error" suivi d’un ’\n’ sur la sortie d’erreur.
+Creer des fonctions si certains paramètres ne sont pas des nombres, ne tiennent pas dans
+un int, ou encore, s’il y a des doublons.
+
+Realise moi mon push_swap.h stp
