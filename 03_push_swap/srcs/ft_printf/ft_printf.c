@@ -17,7 +17,8 @@
 #include <stdio.h>
 
 // int strlen => le NULL de la fin ne comptera pas
-// Parcourir la liste pour afficher la liste char strlen
+// parcourir la liste pourafficher la liste char strlen
+
 // %c Affiche un seul caractère. = isalpha
 // %s Affiche une chaîne de caractères (telle que définie par la convention C). 
 // %d Affiche un nombre décimal (base 10).

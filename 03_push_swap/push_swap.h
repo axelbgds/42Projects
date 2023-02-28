@@ -1,7 +1,18 @@
-#ifndef __PUSH_SWAP__H
-#define __PUSH_SWAP__H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abeaugra <abeaugra@student.42perpignan.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/22 11:49:23 by abeaugra          #+#    #+#             */
+/*   Updated: 2023/02/27 19:53:36 by abeaugra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
+#ifndef __PUSH_SWAP__
+#define __PUSH_SWAP__
+
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -11,21 +22,50 @@ typedef enum
 	true
 }Bool;
 
-/* Definition d'une liste */
-typedef struct ListElement
+typedef struct		s_stack
 {
-	int value;
-	struct ListElement *next;
-}ListElement, *List;
+	int 			data;
+	struct s_stack	*next;
+}t_stack;
 
-/* Proto */
-List	new_list(void);			// ft_lst_new si vide = NULL
-Bool 	is_empty_list(List li); // verifie si vide
-int 	list_length(List li); 	// ft_lstsize taille
-void 	print_list(List li);	// affiche liste
-List 	push_back_list(List li, int x); 	//pa = ajoute un el en fin list
-List 	push_front_list(List li, int x); 	//pb = ajoute un el au dbt list
-List 	pop_back_list(List li);	// retirer second elmt de liste
-List 	pop_front_list(List li);// retirer first elmt de liste 
+/* Parsing functions
+	-> parsing.c */
+int		check_duplicate(int *array, int size);
+int 	ft_isdigit(int c);
+int 	ft_isspace(int c);
+int 	ft_atoi(const char *str);
+int 	check_args(int ac, char **av, int *array, int size);
+
+/* Stack operations 
+	-> stack_ope1.c stack_ope2.c */
+void	sa(t_stack **a);
+void	sb(t_stack **b);
+void	ss(t_stack **a, t_stack **b);
+void 	pa(t_stack **a, t_stack **b);
+void	pb(t_stack **a, t_stack **b);
+void	ra(t_stack **a);
+void	rb(t_stack **b);
+void	rr(t_stack **a, t_stack **b);
+void	rra(t_stack **a);
+void	rrb(t_stack **b);
+void 	rrr(t_stack **a, t_stack **b);
+
+/* Function for handling stack operations	
+	-> chain_list_func.c */
+Bool	is_empty(t_stack *s);
+void	init_stack(t_stack *s, int size);
+void 	print_stack(void);
+void	push(t_stack *s, int x);
+int		pop(t_stack *s);
+int		peek(t_stack *s);
+// void	free_stack(t_stack *s);
+// int		is_empty(stack *s);
+// int		is_full(t_stack *s);
+
+/* Sort ALGO
+	-> sort_push_swap.c*/
+void	sort_small(t_stack **a, t_stack **b, int size);
+void	sort_medium(t_stack **a, t_stack **b, int size);
+void 	sort_large(t_stack **a, t_stack **b, int size);
 
 #endif
