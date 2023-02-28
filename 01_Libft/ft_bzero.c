@@ -20,14 +20,3 @@ void	ft_bzero(void *s, size_t n)
 	while (n--)
 		*(char *)s++ = 0;
 }
-/*
-int     main(void)
-{
-    char    str1[] = "";
-    char    str2[] = "goodbye";
-    ft_bzero(str1, 0);
-    ft_bzero(str2, 1);
-    printf("%s\n", str1);
-    printf("%s\n",str2);
-    return (0);
-}*/

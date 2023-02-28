@@ -18,8 +18,8 @@
 
 typedef enum
 {
-	false,
-	true
+	false, 	// 0
+	true	// 1
 }Bool;
 
 typedef struct		s_stack
@@ -51,13 +51,15 @@ void	rrb(t_stack **b);
 void 	rrr(t_stack **a, t_stack **b);
 
 /* Function for handling stack operations	
-	-> chain_list_func.c */
+	-> function_stack.c */
+t_stack	new_stack(void);
 Bool	is_empty(t_stack *s);
 void	init_stack(t_stack *s, int size);
-void 	print_stack(void);
-void	push(t_stack *s, int x);
-int		pop(t_stack *s);
-int		peek(t_stack *s);
+void	print_stack(void);
+t_stack	clear_stack(t_stack st);
+void	push_stack(t_stack *st, int x);
+int 	pop_stack(t_stack *st);
+int		peek_stack(t_stack *st);
 // void	free_stack(t_stack *s);
 // int		is_empty(stack *s);
 // int		is_full(t_stack *s);

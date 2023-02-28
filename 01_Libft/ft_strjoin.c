@@ -33,22 +33,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ret[s1size + s2size] = 0;
 	return (ret);
 }
-
-/* 
-int main(int argc, char * argv[])
-{
-	char *s;
-	s = strjoin("-", "a", "b", "c", NULL);
-	printf("joined: %s\n", s);
-	free(s);
-	s = strjoin(
-	"------------------------------------",
-	"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-	"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
-	"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-	"DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
-	NULL);
-	printf("joined: %s\n", s);
-	free(s);
-	return 0;
-}*/

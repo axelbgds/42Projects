@@ -68,7 +68,6 @@ int ft_atoi(const char *str)
     while(ft_isdigit(*str))
     {
         num = (num * 10) + (*str - '0');
-        // voir si notre val doit etre comprise dans un int ou pas de pb si +++
         if (num * sign > 2147483648 || num * sign < -2147483648)
             return (0);
         str++;
