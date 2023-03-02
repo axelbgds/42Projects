@@ -10,16 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef __GNL_H__
+# define __GNL_H__
+
+# include <stdlib.h>
+# include <fcntl.h>
+# include <unistd.h>
+# include <stdio.h> // verifier pour printf
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
-
-
-# include <stdlib.h>
-# include <unistd.h>
 
 int		nl_isin(const char *s);
 char	*ft_strjoin(char *s1, const char *s2);

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 /* Checks if there are duplicate in the array */
 int check_duplicate(int *array, int size)

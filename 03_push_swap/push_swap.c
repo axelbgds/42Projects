@@ -12,6 +12,41 @@
 
 #include "push_swap.h"
 
+int main(int ac, char **av)
+{
+	t_stack A;
+	t_stack B;
+
+	int i = 1;
+	if (ac == 2)
+		return 0;
+	init_stack(&A, ac - 1);
+	init_stack(&B, ac - 1);
+	while (i < ac)
+	{
+		if (!is_valid_number (av[i]))
+		{
+			ft_putstr_fd("Error\n",2);
+			return 1;
+		}
+		if (is_duplicate_number(A, ft_atoi(av[i])))
+		{
+			ft_putstr_fd("Error\n",2)
+			return 1;
+		}
+		stack_push(&A, ft_atoi(av[i]));
+		i++;
+	}
+	if (A_is_sorted(&A))
+		return 0;
+	if (A->top <= 5)
+		sort_small_stack(&A, &B);
+	else
+		sort_big_stack(&A, &B);
+	stack_clear(&A);
+	stack_clear(&B);
+	return 0;
+}
 
 // int main(int argc, char **argv)
 // {
