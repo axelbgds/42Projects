@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   chain_list_func.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeaugra <abeaugra@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42perpignan.fr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 15:40:46 by abeaugra          #+#    #+#             */
 /*   Updated: 2023/02/27 15:40:47 by abeaugra         ###   ########.fr       */

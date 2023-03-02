@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeaugra <abeaugra@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42perpignan.fr>   +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 16:45:39 by ddupont           #+#    #+#             */
 /*   Updated: 2022/03/31 21:51:48 by ddupont          ###   ########.fr       */

@@ -26,7 +26,7 @@ typedef struct		s_stack
 {
 	int 			data;
 	struct s_stack	*next;
-}t_stack;
+}	t_stack;
 
 /* Parsing functions
 	-> parsing.c */
@@ -56,12 +56,11 @@ t_stack	new_stack(void);
 Bool	is_empty(t_stack *s);
 void	init_stack(t_stack *s, int size);
 void	print_stack(void);
-t_stack	clear_stack(t_stack st);
+t_stack	clear_stack(t_stack st);	// free
 void	push_stack(t_stack *st, int x);
 int 	pop_stack(t_stack *st);
 int		peek_stack(t_stack *st);
 // void	free_stack(t_stack *s);
-// int		is_empty(stack *s);
 // int		is_full(t_stack *s);
 
 /* Sort ALGO

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   sort_big_stack.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeaugra <abeaugra@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42perpignan.fr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:49:26 by abeaugra          #+#    #+#             */
 /*   Updated: 2023/02/27 15:39:52 by abeaugra         ###   ########.fr       */

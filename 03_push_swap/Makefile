@@ -1,40 +1,50 @@
-NAME =	push_swap
+NAME 			= push_swap
+CFLAGS			= -Wall -Wextra -Werror
 
-srt_dir 		= sort_stack/ 	# go to sort function
+# ----------------------------------------------------------------------------- #
+
 inc_dir 		= includes/ 	# go to .h
-# lib_dir			=  
-stack_ope_dir	= stack_ope/
-pars_dir		= pars_dir/
-checker_dir 	= checker_src/
+stack_ope_dir	= stack_ope/	# go to operation stack
+srt_dir 		= sort_stack/ 	# go to sort function
+pars_dir		= pars_dir/		# go to pars
+checker_dir 	= checker_src/	# checker with GNL and pars
 
+# ----------------------------------------------------------------------------- #
 
+STACK 			= function_stack.c stack_ope1.c stack_ope2.c
 
-SORT_STACK = 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c parsing.c \
+SORT 			= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c parsing.c
 
-CHECKER_SRCS = 
+PARS 			= parsing.c
 
-# SRCS_BONUS = 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
-# 		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-# 		ft_lstclear.c ft_lstiter.c ft_lstmap.c \
+CHECKER 		= mainc.c get_next_line.c get_next_line_utils.c
 
-CFLAGS		= -Wall -Wextra -Werror
+# ----------------------------------------------------------------------------- #
+
 OBJS 		= $(SRCS:.c=.o)
 # OBJS_BONUS 	= $(SRCS_BONUS:.c=.o)
 RM			= rm -f
 
+# ----------------------------------------------------------------------------- #
 
-all :		$(NAME)
-$(NAME) :	$(OBJS)
-			ar rcs $(NAME) $(OBJS)
+all 		: $(NAME)
+$(NAME) 	:
+	CFLAGS -o $(NAME) srcs/main.c 	$(addprefix $(stack_ope_dir), $(STACK))
+									$(addprefix $(srt_dir), $(SORT))
+									$(addprefix $(pars_dir), $(PARS))
 
-# bonus : 	$(OBJS_BONUS)
-# 			ar rcs $(NAME) $(OBJS_BONUS)
+bonus :	$(NAME)
+	CFLAGS -o checker $(NAME)	 	$(addprefix $(checker_dir), $(CHECKER))
+									$(addprefix $(stack_ope_dir), $(STACK))
+									$(addprefix $(srt_dir), $(SORT))
+									$(addprefix $(pars_dir), $(PARS))
 
 clean :		
-		$(RM) $(OBJS) $(OBJS_BONUS)
+		$(RM) $(OBJS)
+		$(RM) checker
 
 fclean :	clean
 			$(RM) $(NAME)
 
-re :		fclean $(NAME)
+re :		fclean all
 
