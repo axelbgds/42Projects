@@ -34,16 +34,22 @@ int main(int ac, char **av)
 			ft_putstr_fd("Error\n",2)
 			return 1;
 		}
-		stack_push(&A, ft_atoi(av[i]));
+		push_stack(&A, ft_atoi(av[i]));
 		i++;
 	}
 	if (A_is_sorted(&A))
+	{
+		if (A->data <= 2)
+			sort_vsm_stack(&A, &B);
+		if (A->data <= 3)
+			sort_small_stack(&A, &B);
+		if (A->data <= 5)
+			sort_middle_stack(&A, &B);
+		else if
+			sort_big_stack(&A, &B);
 		return 0;
-	if (A->top <= 5)
-		sort_small_stack(&A, &B);
-	else
-		sort_big_stack(&A, &B);
-	stack_clear(&A);
-	stack_clear(&B);
+	}
+	clear_stack(&A);
+	clear_stack(&B);
 	return 0;
 }

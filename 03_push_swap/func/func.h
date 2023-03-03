@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h	                                        :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeaugra <abeaugra@student.42perpignan.fr  +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:49:23 by abeaugra          #+#    #+#             */
 /*   Updated: 2023/02/27 19:53:36 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #ifndef __CHECKER_H__
-// #define __CHECKER_H__
+// #ifndef __FUNC__
+// # define __FUNC__
 
-// #include <../func/mylib.h>
+// #include <unistd.h>
 // #include <stdlib.h>
 
 

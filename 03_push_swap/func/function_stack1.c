@@ -63,36 +63,3 @@ t_stack	clear_stack(t_stack st)
 	free(st);
 	return clear_stack(elmt);
 }
-
-/******************************************************************************/
-
-/* Push data int the stack */
-void	push_stack(t_stack *st, int x)
-{
-	t_stack	*elmt;
-
-	elmt = malloc(sizeof(*elmt));
-	if(elmt == NULL)
-	{
-		fprintf(stderr, "Pb allocation dynamique\n");
-		exit(EXIT_FAILURE);
-	}
-	elmt->data = x;
-	elmt->next = st;
-	return (elmt);
-}
-
-/******************************************************************************/
-
-/*  */
-int		pop(t_stack *st);
-{
-
-}
-/******************************************************************************/
-
-/*  */
-// int		peek(t_stack *st);
-
-/******************************************************************************/
-

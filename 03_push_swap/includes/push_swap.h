@@ -28,15 +28,7 @@ typedef struct		s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-/* Parsing functions
-	-> parsing.c */
-int		check_duplicate(int *array, int size);
-int 	ft_isdigit(int c);
-int 	ft_isspace(int c);
-int 	ft_atoi(const char *str);
-int 	check_args(int ac, char **av, int *array, int size);
-
-/* Stack operations 
+/* Stack operations ../func :
 	-> stack_ope1.c stack_ope2.c */
 void	sa(t_stack **a);
 void	sb(t_stack **b);
@@ -60,13 +52,23 @@ t_stack	clear_stack(t_stack st);	// free
 void	push_stack(t_stack *st, int x);
 int 	pop_stack(t_stack *st);
 int		peek_stack(t_stack *st);
-// void	free_stack(t_stack *s);
-// int		is_full(t_stack *s);
+// void	free_stack(t_stack *s); // la creer
+
+
+
+/* Parsing functions
+	-> parsing.c */
+int		check_duplicate(int *array, int size);
+int 	ft_isdigit(int c);
+int 	ft_isspace(int c);
+int 	ft_atoi(const char *str);
+int 	check_args(int ac, char **av, int *array, int size);
 
 /* Sort ALGO
 	-> sort_push_swap.c*/
-void	sort_small(t_stack **a, t_stack **b, int size);
-void	sort_medium(t_stack **a, t_stack **b, int size);
-void 	sort_large(t_stack **a, t_stack **b, int size);
+void	sort_vsm(t_stack **A, t_stack **B);
+void	sort_small(t_stack **A, t_stack **B);
+void	sort_middle(t_stack **A, t_stack **B);
+void 	sort_big(t_stack **A, t_stack **B);
 
 #endif
