@@ -6,7 +6,7 @@
 /*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 20:41:51 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/03/07 13:46:30 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/03/08 19:34:19 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,13 @@ t_stack *fill_stack_value(int ac, char **av)
         if(nb > INT_MAX || nb < INT_MIN)
             exit_error(&stack_a, NULL);
         if(i==1)
-            stack_a = stack_new((int)nb);
+            stack_a = new_stack((int)nb);
         else
-            stack_add_bottom(&stack_a, stack_new((int)nb));
+            add_last_stack(&stack_a, new_stack((int)nb));
         i++;
     }
     return(stack_a);
 }
-
 
 /* assign_index:
 *	Assigns an index to each value in stack a. This is a convenient way to order

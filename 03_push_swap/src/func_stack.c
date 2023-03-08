@@ -6,17 +6,17 @@
 /*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 12:43:49 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/03/07 13:46:54 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/03/08 19:29:05 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* stack_new:
+/* new_stack = stack_new:
 *	Creates a stack elements with the provided value.
 *	Returns the newly created stack element.
 */
-t_stack *stack_new(int value)
+t_stack *new_stack(int value)
 {
     t_stack *new;
 
@@ -33,10 +33,10 @@ t_stack *stack_new(int value)
     return (new);
 }
 
-/* get_stack_size:
+/* lenght_stack = stack_size
 *	Returns the number of elements in a stack.
 */
-int get_stack_size(t_stack *stack)
+int length_stack(t_stack *stack)
 {
     int size;
     
@@ -51,20 +51,20 @@ int get_stack_size(t_stack *stack)
     return (size);
 }
 
-/* get_stack_bottom:
+/* last_stack = get_stack_bottom:
 *	Returns the last element of the stack.
 */
-t_stack *get_stack_bottom(t_stack *stack)
+t_stack *last_stack(t_stack *stack)
 {
     while (stack && stack->next != NULL)
         stack = stack->next;
     return (stack);
 }
 
-/* add_stack_bottom:
+/* add_last_stack = add_stack_bottom:
 *	Adds an element to the bottom of a stack.
 */
-void stack_add_bottom(t_stack **stack, t_stack *new)
+void add_last_stack(t_stack **stack, t_stack *new)
 {
     t_stack *tail;
     
@@ -75,14 +75,14 @@ void stack_add_bottom(t_stack **stack, t_stack *new)
         *stack = new;
         return ;
     }
-    tail = get_stack_bottom(*stack);
+    tail = last_stack(*stack);
     tail->next = new;
 }
 
-/* get_stack_before_bottom:
+/* get_twice_last_stack = get_stack_before_bottom:
 *	Returns the second to last element of the stack.
 */
-t_stack *get_stack_before_bottom(t_stack *stack)
+t_stack *get_twice_last_stack(t_stack *stack)
 {
     while (stack && stack->next && stack->next->next != NULL)
         stack = stack->next;

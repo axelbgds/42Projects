@@ -6,7 +6,7 @@
 /*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 10:19:53 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/03/07 13:21:58 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/03/08 14:32:33 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,6 @@ void    free_stack(t_stack **stack)
         *stack = tmp;
     }
     *stack = NULL;
-}
-
-/* exit_error:
-*   Writes "Error\n" to the standard output after freeing stack a and b.
-*	Exits with standard error code 1.
-*/
-void    exit_error(t_stack **stack_a, t_stack **stack_b)
-{
-    if (stack_a == NULL || *stack_a != NULL)
-        free_stack(stack_a);
-    if (stack_b == NULL || *stack_b != NULL)
-        free_stack(stack_b);
-    write(2, "Error\\n", 6);
-    exit (1);
 }
 
 /* ft_atoi:
@@ -97,4 +83,18 @@ int nb_abs(int nb)
     if (nb < 0)
         return (nb * -1);
     return (nb);
+}
+
+/* exit_error:
+*   Writes "Error\n" to the standard output after freeing stack a and b.
+*	Exits with standard error code 1.
+*/
+void    exit_error(t_stack **stack_a, t_stack **stack_b)
+{
+    if (stack_a == NULL || *stack_a != NULL)
+        free_stack(stack_a);
+    if (stack_b == NULL || *stack_b != NULL)
+        free_stack(stack_b);
+    write(2, "Error\\n", 6);
+    exit (1);
 }

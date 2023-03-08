@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #ifndef __PUSH_SWAP_H__
-# define __PUSH_SWAP_H__
+#define __PUSH_SWAP_H__
 
 #include <stddef.h>
 #include <stdlib.h>
@@ -31,18 +31,18 @@ typedef struct s_stack
 } t_stack;
 
 /* Initialisation
-    -> init.c */
+    -> init.c = OK */
 t_stack *fill_stack_value(int ac, char **av);
 void assign_index(t_stack *stack_a, int ac);
 
 /* Sort Algo
-    -> sort.c */
+    -> sort_small.c sort_big.c = OK*/
 int is_sorted(t_stack *stack);
 void small_sort(t_stack **stack);
 void big_sort(t_stack **stack_a, t_stack **stack_b);
 
 /* Position
-    -> pos.c */
+    -> pos.c = OK*/
 void get_len(t_stack **stack_a, t_stack **stack_b);
 void do_chepeast_moove(t_stack **stack_a, t_stack **stack_b);
 
@@ -67,29 +67,31 @@ void rrb(t_stack **stack_b);
 void rrr(t_stack **stack_a, t_stack **stack_b);
 
 /* Function stack
-    -> func_stack.c */
-t_stack *stack_new(int value);
-int get_stack_size(t_stack *stack);
-void stack_add_bottom(t_stack **stack, t_stack *new);
-t_stack *get_stack_bottom(t_stack *stack);
-t_stack *get_stack_before_bottom(t_stack *stack);
+    -> func_stack.c = OK*/
+t_stack *new_stack(int value);
+int length_stack(t_stack *stack);
+t_stack *last_stack(t_stack *stack);
+void add_last_stack(t_stack **stack, t_stack *new);
+t_stack *get_twice_last_stack(t_stack *stack);
 
 /* Utils
-    -> utils.c */
+    -> utils.c = OK*/
 long int ft_atoi(const char *str);
 void ft_putstr(char *str);
 int nb_abs(int nb);
 void free_stack(t_stack **stack);
-
-/* Error
-    -> error.c */
 void exit_error(t_stack **stack_a, t_stack **stack_b);
 
-/* Input 
-    -> input.c */
+/* Input
+    -> input1.c input2.c = OK*/
 int is_correct_input(char **av);
 int is_digit(char c);
 int is_sign(char c);
 int nbstr_cmp(const char *s1, const char *s2);
+int  arg_is_number(char *av);
+int  twice(char **av);
+int  arg_zero(char *av);
+int is_correct(char **av);
+
 
 #endif

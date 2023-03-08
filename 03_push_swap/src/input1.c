@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input.c                                            :+:      :+:    :+:   */
+/*   input1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 15:07:32 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/03/07 15:36:52 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/03/08 19:37:10 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 /* is_correct_input:
 *   Checks if the given arguments are all numbers, without duplicates.
@@ -19,7 +21,7 @@ int is_correct_input(char **av)
     int i;
     
     i =0;
-    if (is_sign(av[i]))
+    if (is_sign(*av[i]))
         i++;
     while (av[i] && av[i])
         i++;
