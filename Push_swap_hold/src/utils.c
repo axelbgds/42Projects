@@ -3,37 +3,54 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeaugra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/09 11:16:34 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/03/09 11:16:37 by abeaugra         ###   ########.fr       */
+/*   Created: 2023/03/07 10:19:53 by abeaugra          #+#    #+#             */
+/*   Updated: 2023/03/08 14:32:33 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
 
+/* free_stack:
+*	Frees each element in a given stack and sets the stack pointer to NULL.
+*/
+void    free_stack(t_stack **stack)
+{
+    t_stack *tmp;
+
+    if (!stack || !(*stack))
+        return ;
+    while (*stack)
+    {
+        tmp = (*stack)->next;
+        free(*stack);
+        *stack = tmp;
+    }
+    *stack = NULL;
+}
+
 /* ft_atoi:
 *   Converts an alphanumeric string of characters into a long integer.
 */
-int    ft_atoi(const char *str)
+long int    ft_atoi(const char *str)
 {
-    int    nb;
-    int    isneg;
-    int    i;
+    long int    nb;
+    int         isneg;
+    int         i;
 
     nb = 0;
     isneg = 1;
     i = 0;
-    while(str[i] ==  32 || (str[i]>=9 && str[i]<=13))
+    if (str[i] == '+')
         i++;
-    if (str[i] == '+' || str[i] == '-')
+    else if (str[i] == '-')
     {
         isneg *= -1;
         i++;
     }
-    while (str[i] & str[i]>='0' && str[i]<='9')
+    while (is_digit(str[i]))
     {
         nb = (nb * 10) + (str[i] - '0');
         i++;
@@ -68,25 +85,16 @@ int nb_abs(int nb)
     return (nb);
 }
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+/* exit_error:
+*   Writes "Error\n" to the standard output after freeing stack a and b.
+*	Exits with standard error code 1.
+*/
+void    exit_error(t_stack **stack_a, t_stack **stack_b)
 {
-    size_t  i;
-
-    i = 0;
-    if (n == 0)
-        return (0);
-    while (s1[i] && s2[i] && (unsigned char)s1[i] == (unsigned char)s2[i]
-        && i < (n - 1))
-        i++;
-    return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-}
-
-size_t  ft_strlen(const char *str)
-{
-    size_t  i;
-
-    i = 0;
-    while (str[i] != '\0')
-        i++;
-    return (i);
+    if (stack_a == NULL || *stack_a != NULL)
+        free_stack(stack_a);
+    if (stack_b == NULL || *stack_b != NULL)
+        free_stack(stack_b);
+    write(2, "Error\\n", 6);
+    exit (1);
 }
