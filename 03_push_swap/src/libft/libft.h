@@ -6,7 +6,7 @@
 /*   By: abeaugra <abeaugra@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 15:47:57 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/03/10 12:52:35 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/03/14 13:18:38 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@
 # include <string.h>
 # include <limits.h>
 # include <stdlib.h>
+# include <stdbool.h>
 
 typedef struct s_list
 {
-	void			*content;
+	void		*content;
 	struct s_list	*next;
 }t_list;
 
@@ -45,7 +46,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
+void	ft_putstr(char *s);
 void	ft_putendl_fd(char *s, int fd);
 
 // BONUS
