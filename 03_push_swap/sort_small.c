@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   small_sort.c                                       :+:      :+:    :+:   */
+/*   sort_small.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 14:10:03 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/03/16 12:06:16 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/03/17 13:21:02 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,11 @@ void	sort_3(t_lst **s)
 		sa(s, 1);
 }
 
+/* Get_min */
+
 /* sort_5 
 get_posi_min = plus peti elmt dans stack  
 rra = jusqua que je trouvr le plus petit et je f pb
 get_pos_min = deuxieme envoyer b
 
-*/
-
-
-/* big sort 
-algo lis = sur algo de trie
 */

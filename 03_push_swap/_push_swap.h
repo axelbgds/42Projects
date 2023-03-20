@@ -17,7 +17,7 @@ bool	ft_croissant(t_lst *lst);
 void    *clear_lst(size_t size, int param);
 
 /* Trie de la liste
-	-> list_sort1.c list_sort2.c */
+	-> list_sortb.c list_sorta.c */
 void    push_node_a(t_lst **lst_a, t_lst **lst_b, t_lst *node);
 void    push_node_b(t_lst **lst_a, t_lst **lst_b, t_lst *node);
 void    push_smallest_to_a(t_lst **lst_a, t_lst **lst_b, t_lst *node);

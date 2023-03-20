@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_list.c                                        :+:      :+:    :+:   */
+/*   list_sortb.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:15:56 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/03/16 15:33:38 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/03/17 13:15:18 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 // Déplace un nœud vers la lst_a
 void    push_node_a(t_lst **lst_a, t_lst **lst_b, t_lst *node)
 {
-    int rotate_b = node->pos_b;     //pos_b ?
+    int rotate_b = node->pos_b;
     int rotate_a = node->address->pos_b;
 
     while (rotate_b && rotate_a)
@@ -47,8 +47,8 @@ void    push_node_a(t_lst **lst_a, t_lst **lst_b, t_lst *node)
 // Déplace un nœud vers la lst_b
 void    push_node_b(t_lst **lst_a, t_lst **lst_b, t_lst *node)
 {
-    int keep_a = node->address->pos_b;  //pos_b ?
-    int keep_b = node->pos_b;           //pos_b ?
+    int keep_a = node->address->pos_b;
+    int keep_b = node->pos_b;
     
     if (keep_a > keep_b)
     {
@@ -74,13 +74,13 @@ void    push_smallest_to_a(t_lst **lst_a, t_lst **lst_b, t_lst *node)
     int moves_b;
 
     moves_a = 0;
-    while(node->address->pos_b - moves_a > 0) //pos_b ?
+    while(node->address->pos_b - moves_a > 0)
     {
         moves_a++;
         rr(lst_a, lst_b, 1);
     }
     moves_b = 0;
-    while (node->pos_b - moves_b > 0)       //pos_b ?
+    while (node->pos_b - moves_b > 0)
     {
         moves_b++;
         rr(lst_a, lst_b, 2);
@@ -91,15 +91,15 @@ void    push_smallest_to_a(t_lst **lst_a, t_lst **lst_b, t_lst *node)
 // Push last elmt sur l'autre lst
 void    push_last(t_lst **lst_a, t_lst **lst_b, t_lst *node)
 {
-    while (node->address->pos_b)            //pos_b ?
+    while (node->address->pos_b)
     {
         rra(lst_a, 1);
-        node->address->pos_b--;             //pos_b ?
+        node->address->pos_b--;
     }
-    while (node->pos_b)                     //pos_b ?
+    while (node->pos_b)
     {
         rb(lst_b, 1);
-        node->pos_b;                        //pos_b ?
+        node->pos_b;
     }
     pa(lst_a, lst_b, 1);
 }

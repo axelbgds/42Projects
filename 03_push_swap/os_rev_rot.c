@@ -6,7 +6,7 @@
 /*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:06:35 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/03/16 12:08:39 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/03/17 13:21:34 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,22 @@ static void	rev_rot(t_lst **lst)
 	
 void	rra(t_lst **lst_a, int flag)
 {
-	rrotate(lst_a);
+	rev_rot(lst_a);
 	if (flag)
 		ft_putendl_fd("rra", 1);
 }
 
 void	rrb(t_lst **lst_b, int flag)
 {
-	rrotate(lst_b);
+	rev_rot(lst_b);
 	if (flag)
 		ft_putendl_fd("rrb", 1);
 }
 
 void	rrrt_list(t_lst **lst_a, t_lst **lst_b, int flag)
 {
-	rrotate(lst_a);
-	rrotate(lst_b);
+	rev_rot(lst_a);
+	rev_rot(lst_b);
 	if (flag)
 		ft_putendl_fd("rrr", 1);
 }

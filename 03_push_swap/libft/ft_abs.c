@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   os_rev_rot.c                                       :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeaugra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/09 11:16:10 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/03/09 11:16:12 by abeaugra         ###   ########.fr       */
+/*   Created: 2023/03/17 13:58:20 by abeaugra          #+#    #+#             */
+/*   Updated: 2023/03/17 13:59:10 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-// static void	rev_rot(t_list **stack)
-// {
-	
-// }
+int ft_abs(int n)
+{
+    if (n < 0)
+        return (-n);
+    else
+        return (n); 
+}
