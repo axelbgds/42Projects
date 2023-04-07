@@ -6,7 +6,7 @@
 /*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 10:42:06 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/04/03 10:43:24 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/04/07 13:59:36 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,20 +103,24 @@ char	**ft_split(char const *s, char c)
 	return (worker(w_arr, s1, c, j));
 }
 
-/*
-words_count : compte le nombre de mots dans la chaîne s en utilisant le caractère c comme délimiteur.
+/*words_count : compte le nombre de mots dans la chaîne s en
+**utilisant le caractère c comme délimiteur.word : extrait 
+**un mot de la chaîne s en se basant sur le caractère c. 
+**Il retourne une nouvelle chaîne de caractères allouée 
+**contenant ce mot.
 
-word : extrait un mot de la chaîne s en se basant sur le caractère c. Il retourne une nouvelle chaîne 
-de caractères allouée contenant ce mot.
+**free_arr : libère la mémoire allouée pour le tableau de 
+**chaînes de caractères arr et la chaîne s. 
+**Retourne NULL pour faciliter l'utilisation dans 
+**d'autres fonctions.
 
-free_arr : libère la mémoire allouée pour le tableau de chaînes de caractères arr et la chaîne s. 
-Retourne NULL pour faciliter l'utilisation dans d'autres fonctions.
+**worker : remplit le tableau arr avec les mots extraits de 
+**la chaîne s1 en utilisant le caractère c comme délimiteur.
+**Libère la mémoire de la chaîne originale s1.
 
-worker : remplit le tableau arr avec les mots extraits de la chaîne s1 en utilisant le caractère c 
-comme délimiteur. Libère la mémoire de la chaîne originale s1.
-
-ft_split : fonction principale qui divise la chaîne de caractères s en sous-chaînes en utilisant 
-le caractère c. Crée un tableau de chaînes de caractères pour stocker les mots et appelle les fonctions 
-précédemment mentionnées pour effectuer le travail.
-
+**ft_split : fonction principale qui divise la chaîne de 
+**caractères s en sous-chaînes en utilisant le caractère c.
+**Crée un tableau de chaînes de caractères pour stocker 
+**les mots et appelle les fonctions précédemment mentionnées 
+**pour effectuer le travail
 */

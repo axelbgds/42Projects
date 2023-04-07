@@ -6,7 +6,7 @@
 /*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 11:44:29 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/04/05 10:30:08 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/04/07 14:00:00 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ char	*ft_strdup(const char *s1)
 	result[index] = '\0';
 	return (result);
 }
-
 
 size_t	ft_strlen(const char *s)
 {

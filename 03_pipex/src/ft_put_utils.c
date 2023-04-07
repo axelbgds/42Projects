@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_put_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 14:40:46 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/04/05 10:30:56 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/04/07 11:34:53 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 }
 
-
 /*	Écrit La chaîne de caractères ’s’ sur le
 *	descripteur de fichier donné suivie d’un retour à
 *	la ligne.*/
@@ -32,7 +31,6 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }
-
 
 /*	Écrit la chaîne de caractères ’s’ sur le
 *	descripteur de fichier donné.*/
