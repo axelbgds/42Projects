@@ -1,80 +1,55 @@
 NAME = push_swap
+CC = @gcc
+RM = @rm -f
+FLAGS = -Wall -Wextra -Werror
+BONUS_NAME = checker
 
-NAME_CHECK = checker
+SRC_1 = push_swap.c \
 
-CC = CC
+SRC_2 =	push_swap_rules.c \
+		push_swap_rules_two.c \
+		push_swap_rules_three.c \
+		push_swap_rules_four.c \
+		push_swap_quicksort.c \
+		push_swap_sort.c \
+		push_swap_printf.c \
+		push_swap_utils.c \
+		push_swap_split.c \
+		push_swap_split_utils.c
+		
+BONUS_SRC = checker.c \
+			get_next_line.c
+			
+OBJ_1 = ${SRC_1:.c=.o}
+OBJ_2 = ${SRC_2:.c=.o}
 
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address
+BONUS_OBJ =${BONUS_SRC:.c=.o}
 
-SRC = 	check_arg.c clear_lst.c list_sortb.c list_sorta.c \
-		os_push.c os_swap.c os_rev_rot.c os_rotate.c \
-		sort_big.c sort_small.c
+${NAME}: ${OBJ_1} ${OBJ_2} credit
+	${CC} ${FLAGS} ${OBJ_1} ${OBJ_2} -o ${NAME}
+	@echo "\n\033[32mMandatory files compiled successfully ✅\033[32m\n"
+${BONUS_NAME}: ${OBJ_2} ${BONUS_OBJ} 
+	${CC} ${FLAGS} ${BONUS_OBJ} ${OBJ_2} -o ${BONUS_NAME}
 
-BSRC = 	main_bonus.c check_arg.c os_push.c os_swap.c os_rotate.c \
-		os+os_rev_rot.c
+all: ${NAME} ${BONUS_NAME} 
 
-OBJS = $(SRC:.c-.o)
-
-OBJS_BON = $(BSRC:.c-.o)
-
-all: $(NAME)
-
-bonus: $(NAME_B)
-
-libft/libft.a:
-	make bonus -C libft
-
-%.o:%.c push_swap.h
-	$(CC) $(CFLAGS) -c $<
-
-$(NAME): $(OBJS) libft/libft.a push_swap.h libft/libft.h $(BON)
-	$(CC) $(CFLAGS) $(OBJS_BON) libft/libft.a -o $(NAME_B)
-
+bonus: ${BONUS_NAME} 
+	@echo "\n\033[32mBonus files compiled successfully ✅\033[32m\n"
 clean:
-	rm -f $(OBJS) $(OBJS_BON)
-	make clean -C libft
+	${RM} ${OBJ_1} ${OBJ_2} ${BONUS_OBJ}
+	@echo "\n\033[32mObject files compiled successfully ✅\033[32m\n"
 
 fclean: clean
-	rm -f $(NAME)
-	make fclean -C libft
-	rm -rf $(NAME_B)
+	${RM} ${NAME} ${BONUS_NAME}
+	@echo "\n\033[32mAll files deleted successfully ✅\033[32m\n"
 
-re: fclean all
+re: clean all
 
-test2:	$(NAME)	
-			$(eval ARG = $(shell shuf -i 0-100 -n 2))
-			./push_swap $(ARG) | ./checker_linux $(ARG)
-			@echo -n "Instructions: "
-			@./push_swap $(ARG) | wc -l
+credit:
+	@echo "\n"
+	@echo "░▒█▀▀█░▒█░▒█░▒█▀▀▀█░▒█░▒█░░░▒█▀▀▀█░▒█░░▒█░█▀▀▄░▒█▀▀█"
+	@echo "░▒█▄▄█░▒█░▒█░░▀▀▀▄▄░▒█▀▀█░░░░▀▀▀▄▄░▒█▒█▒█▒█▄▄█░▒█▄▄█"
+	@echo "░▒█░░░░░▀▄▄▀░▒█▄▄▄█░▒█░▒█░░░▒█▄▄▄█░▒▀▄▀▄▀▒█░▒█░▒█░░░\n"
+	@echo "     \033[0;96m       Made by : abeaugra \033[0;96m"
 
-test3:	$(NAME)	
-			$(eval ARG = $(shell shuf -i 0-100 -n 3))
-			./push_swap $(ARG) | ./checker_linux $(ARG)
-			@echo -n "Instructions: "
-			@./push_swap $(ARG) | wc -l
-
-test5:	$(NAME)	
-			$(eval ARG = $(shell shuf -i 0-5000 -n 5))
-			./push_swap $(ARG) | ./checker_linux $(ARG)
-			@echo -n "Instructions: "
-			@./push_swap $(ARG) | wc -l
-
-test100:	$(NAME)	
-				$(eval ARG = $(shell shuf -i 0-5000 -n 100))
-				./push_swap $(ARG) | ./checker_linux $(ARG)
-				@echo -n "Instructions: "
-				@./push_swap $(ARG) | wc -l
-
-test500:	$(NAME)	
-				$(eval ARG = $(shell shuf -i 0-5000 -n 500))
-				./push_swap $(ARG) | ./checker_linux $(ARG)
-				@echo -n "Instructions: "
-				@./push_swap $(ARG) | wc -l
-
-test1000:	$(NAME)	
-				$(eval ARG = $(shell shuf -i 0-5000 -n 1000))
-				./push_swap $(ARG) | ./checker_linux $(ARG)
-				@echo -n "Instructions: "
-				@./push_swap $(ARG) | wc -l
-
-.PHONY: clean fclean re all test2 test3 test5 test100 test500 test1000
+.PHONY: all clean fclean re bonus
