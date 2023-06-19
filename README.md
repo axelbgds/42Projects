@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://admissions.42nice.fr/uploads/admissions/campus/logo_website/38/42Nice-logo-v2.svg" alt="Common core 42" width="350"/>
+  <img src="https://42perpignan.fr/wp-content/uploads/2022/05/42-Perpignan-white500x170.png" alt="Common core 42" width="350"/>
 </p>
 
 ## How It Works THE PROGRAM
