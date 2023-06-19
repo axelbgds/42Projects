@@ -20,32 +20,24 @@ These exercises gather my work done during the 28 days in 42. All my work is the
   <img src="https://static.wixstatic.com/media/154aad_28249b46a7c74649bbd6f9a0501d314d~mv2.png/v1/fill/w_740,h_404,al_c,q_90/154aad_28249b46a7c74649bbd6f9a0501d314d~mv2.webp" alt="Common core 42" width="700" />
 </p>
 
-**00  Resources**
+# 42 School Projects and Skills
 
-**01  Libft** (100%)
+This is a summary of the key projects from the 42 School's curriculum, the skills they emphasize, and the estimated level of the learner.
 
-**02  Ft_printf** (100%)
+| 42 School Project | Skill 1 | Skill 2 | Skill 3 | Level |
+| --- | --- | --- | --- | --- |
+| **Libft** | Memory-Management | Function-Creation | Optimization | Beginner |
+| **Ft_printf** | Variadic-Functions | Formatting | Parsing | Beginner |
+| **Get_next_line** | Static-Variables | File-Descriptors | Buffer-Management | Beginner |
+| **Born2beroot** | System-Administration | Network-Configuration | Security-Protocols | Intermediate |
+| **So_long (Not yet)** | Graphics | Algorithm-Implementation | Event-Handling | Intermediate |
+| **Pipex (Not yet)** | Inter-Process-Communication | Unix-Pipelines | System-Commands | Intermediate |
+| **Push_swap (Not yet)** | Sorting-Algorithms | Optimization | Data-Structures | Intermediate |
+| **Philosophers (Not yet)** | Threads | Mutexes | Concurrency | Intermediate |
+| **Minishell (Not yet)** | Process-Creation | Signal-Handling | Shell-Programming | Intermediate |
+| **C++ Modules (Not yet)** | Object-Oriented-Programming | STL | Templates | Senior |
+| **Cub3D (Not yet)** | Graphics | Raycasting | Algorithms | Senior |
+| **Netpractice (Not yet)** | Networking | Socket-Programming | TCP/IP | Senior |
+| **Containers (Not yet)** | STL | Templates | Data-Structures | Senior |
+| **Transcendence (Not yet)** | Full-Stack-Development | Database | Web-Security | Senior |
 
-**02  Get_next_line** (100%)
-
-**02  Born2beroot** (100%)
-
-**03  So_long** (Not yet)
-
-**03  Pipex** (Not yet)
-
-**03  Push_swap** (Not yet)
-
-**04  Philosophers** (Not yet)
-
-**04  Minishell** (Not yet)
-
-**05  C++ Modules** (Not yet)
-
-**05  Cub3D** (Not yet)
-
-**05  Netpratice** (Not yet)
-
-**06  Containers** (Not yet)
-
-**07  Transcendance** (Not yet)
