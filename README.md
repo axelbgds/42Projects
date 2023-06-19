@@ -23,7 +23,7 @@ This is a summary of the key projects from the 42 School's curriculum, the skill
 | **Libft** | Memory-Management | Function-Creation | Optimization | Beginner |
 | **Ft_printf** | Variadic-Functions | Formatting | Parsing | Beginner |
 | **Get_next_line** | Static-Variables | File-Descriptors | Buffer-Management | Beginner |
-| **Born2beroot** | System-Administration | Network-Configuration | Security-Protocols | Intermediate |
+| **Born2beroot** | System-Administration | Network-Configuration | Security-Protocols | Beginner |
 | **So_long (Not yet)** | Graphics | Algorithm-Implementation | Event-Handling | Intermediate |
 | **Pipex (Not yet)** | Inter-Process-Communication | Unix-Pipelines | System-Commands | Intermediate |
 | **Push_swap (Not yet)** | Sorting-Algorithms | Optimization | Data-Structures | Intermediate |
