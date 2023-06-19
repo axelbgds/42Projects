@@ -19,7 +19,7 @@ These exercises gather my work done during the 28 days in 42. All my work is the
 This is a summary of the key projects from the 42 School's curriculum, the skills they emphasize, and the estimated level of the learner.
 
 | 42 School Project | Skill 1 | Skill 2 | Skill 3 | Level |
-| --- | --- | --- | --- | --- |
+| --- | :---: | :---: | :---: | :---: |
 | **Libft** | Memory-Management | Function-Creation | Optimization | Beginner |
 | **Ft_printf** | Variadic-Functions | Formatting | Parsing | Beginner |
 | **Get_next_line** | Static-Variables | File-Descriptors | Buffer-Management | Beginner |
