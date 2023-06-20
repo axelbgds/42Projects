@@ -24,10 +24,10 @@ This is a summary of the key projects from the 42 School's curriculum, the skill
 | **Ft_printf** | Variadic-Functions | Formatting | Parsing | Beginner |
 | **Get_next_line** | Static-Variables | File-Descriptors | Buffer-Management | Beginner |
 | **Born2beroot** | System-Administration | Network-Configuration | Security-Protocols | Beginner |
-| **So_long (Not yet)** | Graphics | Algorithm-Implementation | Event-Handling | Intermediate |
-| **Pipex (Not yet)** | Inter-Process-Communication | Unix-Pipelines | System-Commands | Intermediate |
-| **Push_swap (Not yet)** | Sorting-Algorithms | Optimization | Data-Structures | Intermediate |
-| **Philosophers (Not yet)** | Threads | Mutexes | Concurrency | Intermediate |
+| **Fractol** | Graphics | Algorithm-Implementation | Event-Handling | Intermediate |
+| **Pipex** | Inter-Process-Communication | Unix-Pipelines | System-Commands | Intermediate |
+| **Push_swap** | Sorting-Algorithms | Optimization | Data-Structures | Intermediate |
+| **Philosophers** | Threads | Mutexes | Concurrency | Intermediate |
 | **Minishell (Not yet)** | Process-Creation | Signal-Handling | Shell-Programming | Intermediate |
 | **C++ Modules (Not yet)** | Object-Oriented-Programming | STL | Templates | Senior |
 | **Cub3D (Not yet)** | Graphics | Raycasting | Algorithms | Senior |
