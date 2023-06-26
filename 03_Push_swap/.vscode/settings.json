@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.html": "twig",
+        "*.tcc": "c",
+        "compare": "c",
+        "limits": "c",
+        "random": "c",
+        "push_swap.h": "c"
+    }
+}
