@@ -8,30 +8,23 @@
   <img src="https://42perpignan.fr/wp-content/uploads/2022/05/42-Perpignan-white500x170.png" alt="Common core 42" width="350"/>
 </p>
 
-## How It Works THE PROGRAM
-42 is a future-proof computer science training to educate the next generation of software engineers. The 42 program takes a project-based approach to progress and is designed to develop technical and people skills that match the expectations of the labor market.
-
-## Entrance exam : **00  Pool** 
-These exercises gather my work done during the 28 days in 42. All my work is there, thanks to my efforts during this one I could be accepted in the school after finishing. According to my logtime I worked an average of 9 hours / days.
-
 # 42 School Projects and Skills
 
 This is a summary of the key projects from the 42 School's curriculum, the skills they emphasize, and the estimated level of the learner.
 
-| 42 School Project | Skill 1 | Skill 2 | Skill 3 | Level |
-| --- | :---: | :---: | :---: | :---: |
-| **Libft** | Memory-Management | Function-Creation | Optimization | Beginner |
-| **Ft_printf** | Variadic-Functions | Formatting | Parsing | Beginner |
-| **Get_next_line** | Static-Variables | File-Descriptors | Buffer-Management | Beginner |
-| **Born2beroot** | System-Administration | Network-Configuration | Security-Protocols | Beginner |
-| **Fractol** | Graphics | Algorithm-Implementation | Event-Handling | Intermediate |
-| **Pipex** | Inter-Process-Communication | Unix-Pipelines | System-Commands | Intermediate |
-| **Push_swap** | Sorting-Algorithms | Optimization | Data-Structures | Intermediate |
-| **Philosophers** | Threads | Mutexes | Concurrency | Intermediate |
-| **Minishell (Not yet)** | Process-Creation | Signal-Handling | Shell-Programming | Intermediate |
-| **C++ Modules (Not yet)** | Object-Oriented-Programming | STL | Templates | Senior |
-| **Cub3D (Not yet)** | Graphics | Raycasting | Algorithms | Senior |
-| **Netpractice (Not yet)** | Networking | Socket-Programming | TCP/IP | Senior |
-| **Containers (Not yet)** | STL | Templates | Data-Structures | Senior |
-| **Transcendence (Not yet)** | Full-Stack-Development | Database | Web-Security | Senior |
-
+| Projet de l'école 42 | Compétence 1 | Compétence 2 | Compétence 3 | Niveau | Note |
+| --- | :---: | :---: | :---: | :---: | --- |
+| **Libft** | Gestion de la mémoire | Création de fonctions | Optimisation | Débutant | 125 |
+| **Ft_printf** | Fonctions variadiques | Formatage | Analyse | Débutant | 100 |
+| **Get_next_line** | Variables statiques | Descripteurs de fichiers | Gestion du buffer | Débutant | 125 |
+| **Born2beroot** | Administration système | Configuration réseau | Protocoles de sécurité | Débutant | 110 |
+| **Fractol** | Graphiques | Implémentation d'algorithmes | Gestion des événements | Intermédiaire | 125 |
+| **Pipex** | Communication inter-processus | Pipelines Unix | Commandes système | Intermédiaire | 125 |
+| **Push_swap** | Algorithmes de tri | Optimisation | Structures de données | Intermédiaire |  |
+| **Philosophers** | Threads | Mutex | Concurrence | Intermédiaire |  |
+| **Minishell (Pas encore)** | Création de processus | Gestion des signaux | Programmation shell | Intermédiaire |  |
+| **Modules C++ (Pas encore)** | Programmation orientée objet | STL | Modèles | Senior |  |
+| **Cub3D (Pas encore)** | Graphiques | Raycasting | Algorithmes | Senior |  |
+| **Netpractice (Pas encore)** | Réseaux | Programmation de sockets | TCP/IP | Senior |  |
+| **Containers (Pas encore)** | STL | Modèles | Structures de données | Senior |  |
+| **Transcendence (Pas encore)** | Développement full-stack | Base de données | Sécurité web | Senior |  |
