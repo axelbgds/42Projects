@@ -22,9 +22,9 @@ This is a summary of the key projects from the 42 School's curriculum, the skill
 | **Pipex** | Communication inter-processus | Pipelines Unix | Commandes système | Intermédiaire | 125 |
 | **Push_swap** | Algorithmes de tri | Optimisation | Structures de données | Intermédiaire |  |
 | **Philosophers** | Threads | Mutex | Concurrence | Intermédiaire |  |
-| **Minishell (Pas encore)** | Création de processus | Gestion des signaux | Programmation shell | Intermédiaire |  |
-| **Modules C++ (Pas encore)** | Programmation orientée objet | STL | Modèles | Senior |  |
-| **Cub3D (Pas encore)** | Graphiques | Raycasting | Algorithmes | Senior |  |
-| **Netpractice (Pas encore)** | Réseaux | Programmation de sockets | TCP/IP | Senior |  |
-| **Containers (Pas encore)** | STL | Modèles | Structures de données | Senior |  |
-| **Transcendence (Pas encore)** | Développement full-stack | Base de données | Sécurité web | Senior |  |
+| **Minishell ** | Création de processus | Gestion des signaux | Programmation shell | Intermédiaire |  |
+| **Modules C++ ** | Programmation orientée objet | STL | Modèles | Senior |  |
+| **Cub3D ** | Graphiques | Raycasting | Algorithmes | Senior |  |
+| **Netpractice ** | Réseaux | Programmation de sockets | TCP/IP | Senior |  |
+| **Containers ** | STL | Modèles | Structures de données | Senior |  |
+| **Transcendence ** | Développement full-stack | Base de données | Sécurité web | Senior |  |
