@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 11:20:44 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/06/26 15:40:26 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/06/27 11:27:12 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int			ft_isalpha(int c);
 int			sign(int c);
 int			digit(int c);
 int			space(int c);
+int			space_atoi(char *str);
 void		ft_error(void);
 void		stack_free(t_stack **lst);
 t_stack		*ft_lstlast(t_stack *lst);
@@ -91,5 +92,3 @@ void		ft_check_ope(t_stack **a, t_stack **b, char *line);
 void		ft_check_stack(t_stack **a, t_stack **b, char *line);
 
 #endif
-
-// void algorithm(int argc, char **argv);

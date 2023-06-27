@@ -6,7 +6,7 @@
 /*   By: abeaugra <abeaugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 09:35:40 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/06/27 11:05:03 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/06/27 11:36:52 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ int	atoi_push(const char *str, t_stack *a)
 
 	i = 0;
 	mod = 1;
-	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\f'
-		|| *str == '\v' || *str == '\r')
+	while (*str && space(*str))
 		str++;
 	if (*str == '-')
 	{
@@ -32,15 +31,13 @@ int	atoi_push(const char *str, t_stack *a)
 	}
 	else if (*str == '+')
 		str++;
-	while (*str)
+	while (*str && ft_isdigit(*str))
 	{
-		if (!ft_isdigit(*str))
-			ft_error();
-		i = i * 10 + (*str - 48);
+		i = i * 10 + (*str - '0');
 		str++;
 	}
 	if ((mod * i) > 2147483647 || (mod * i) < -2147483648)
-	{	
+	{
 		stack_free(&a);
 		ft_error();
 	}

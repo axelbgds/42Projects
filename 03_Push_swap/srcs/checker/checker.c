@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 09:35:27 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/06/26 15:46:28 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/06/27 11:53:59 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ int	main(int argc, char **argv)
 	t_stack	*b;
 	char	*line;
 
+	if (argc <= 1)
+		return (0);
 	b = NULL;
 	a = process(argc, argv);
 	if (!a || check_dup(a))
