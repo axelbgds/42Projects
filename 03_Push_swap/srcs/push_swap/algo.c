@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 09:35:40 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/06/26 15:41:51 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/06/27 11:05:03 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // 1. checks < 2.
 // 2. checks = 2.
 // 3. checks > 2.
-int	atoi_push(const char *str)
+int	atoi_push(const char *str, t_stack *a)
 {
 	int				mod;
 	long long int	i;
@@ -40,7 +40,10 @@ int	atoi_push(const char *str)
 		str++;
 	}
 	if ((mod * i) > 2147483647 || (mod * i) < -2147483648)
+	{	
+		stack_free(&a);
 		ft_error();
+	}
 	return (mod * i);
 }
 
@@ -58,7 +61,7 @@ t_stack	*sub_process(char **argv)
 	tmp = ft_split(argv[1], 32);
 	while (tmp[i])
 	{
-		j = atoi_push(tmp[i]);
+		j = atoi_push(tmp[i], a);
 		ft_add_back(&a, ft_new_stack(j));
 		i++;
 	}
@@ -87,7 +90,7 @@ t_stack	*process(int argc, char **argv)
 	{
 		while (i < argc)
 		{
-			j = atoi_push(argv[i]);
+			j = atoi_push(argv[i], a);
 			ft_add_back(&a, ft_new_stack(j));
 			i++;
 		}
