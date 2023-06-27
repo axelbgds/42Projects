@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_args.c                                    :+:      :+:    :+:   */
+/*   check_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 09:35:40 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/06/26 10:59:30 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/06/27 10:02:53 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ int	check_args(char **argv)
 {
 	alpha_check(argv);
 	if (!check_error(argv, 1, 0))
-		return (false);
-	return (true);
+		return (1);
+	return (0);
 }
 
 // Valid arguments are added one by one to a stack 

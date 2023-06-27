@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abeaugra <abeaugra@student.42perp.fr>      +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 09:35:40 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/06/26 15:40:26 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/06/27 10:05:30 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ int	main(int argc, char **argv)
 	t_stack	*a;
 
 	a = process(argc, argv);
+	if (check_args(argv))
+	{	
+		stack_free(&a);
+		ft_error();
+	}
 	if (!a || check_dup(a))
 	{
 		stack_free(&a);
