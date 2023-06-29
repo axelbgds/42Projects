@@ -23,8 +23,9 @@ This is a summary of the key projects from the 42 School's curriculum, the skill
 | **Push_swap** | Algorithmes de tri | Optimisation | Structures de données | Intermédiaire | 125 |
 | **Philosophers** | Threads | Mutex | Concurrence | Intermédiaire |  |
 | **Minishell** | Création de processus | Gestion des signaux | Programmation shell | Intermédiaire |  |
-| **Modules C++** | Programmation orientée objet | STL | Modèles | Senior |  |
-| **Cub3D** | Graphiques | Raycasting | Algorithmes | Senior |  |
-| **Netpractice** | Réseaux | Programmation de sockets | TCP/IP | Senior |  |
-| **Containers** | STL | Modèles | Structures de données | Senior |  |
+| **Modules C++** | Programmation orientée objet | STL | Modèles | Intermédiaire |  |
+| **Cub3D** | Graphiques | Raycasting | Algorithmes | Intermédiaire |  |
+| **Netpractice** | Réseaux | Programmation de sockets | TCP/IP | Intermédiaire |  |
+| **Inception** | | | | Senior | |
+| **ft_irc** | | | | Senior | |
 | **Transcendence** | Développement full-stack | Base de données | Sécurité web | Senior |  |
