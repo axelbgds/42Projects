@@ -20,7 +20,7 @@ This is a summary of the key projects from the 42 School's curriculum, the skill
 | **Born2beroot** | Administration système | Configuration réseau | Protocoles de sécurité | Débutant | 110 |
 | **Fractol** | Graphiques | Implémentation d'algorithmes | Gestion des événements | Intermédiaire | 125 |
 | **Pipex** | Communication inter-processus | Pipelines Unix | Commandes système | Intermédiaire | 125 |
-| **Push_swap** | Algorithmes de tri | Optimisation | Structures de données | Intermédiaire |  |
+| **Push_swap** | Algorithmes de tri | Optimisation | Structures de données | Intermédiaire | 125 |
 | **Philosophers** | Threads | Mutex | Concurrence | Intermédiaire |  |
 | **Minishell** | Création de processus | Gestion des signaux | Programmation shell | Intermédiaire |  |
 | **Modules C++** | Programmation orientée objet | STL | Modèles | Senior |  |
