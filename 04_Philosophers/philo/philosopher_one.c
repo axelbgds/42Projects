@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philosopher_one.c                                  :+:      :+:    :+:   */
+/*   philo_one.c                                  		:+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spirnaz <spirnaz@student.42kocaeli.com.    +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/02 22:50:32 by spirnaz           #+#    #+#             */
-/*   Updated: 2023/06/02 22:50:33 by spirnaz          ###   ########.fr       */
+/*   Created: 2023/06/02 12:35:15 by abeaugra          #+#    #+#             */
+/*   Updated: 2023/08/24 14:36:40 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosophers.h"
+#include "philo.h"
 
-static void	*philosopher_one_func(void *void_philosopher)
+static void	*philo_one_func(void *void_philosopher)
 {
-	t_philosopher	*philosopher;
-	t_data			*data;
+	t_philo	*philosopher;
+	t_data	*data;
 
-	philosopher = (t_philosopher *)void_philosopher;
+	philosopher = (t_philo *)void_philosopher;
 	data = philosopher->data;
 	pthread_mutex_lock(&data->forks[0]);
-	philosopher_writer(philosopher, "has taken a fork");
+	philo_writer(philosopher, "has taken a fork");
 	pthread_mutex_unlock(&data->forks[0]);
-	philosopher_wait(data, data->time_to_die);
-	philosopher_writer(philosopher, "died");
+	philo_wait(data, data->time_to_die);
+	philo_writer(philosopher, "died");
 	return (NULL);
 }
 
-void	philosopher_one(t_data *data)
+void	philo_one(t_data *data)
 {
-	data->start_time = get_time_milliseconds();
-	if (pthread_create(&data->philosophers[0].thread_id, NULL, \
-	philosopher_one_func, &data->philosophers[0]) != 0)
+	data->start_time = get_time_ms();
+	if (pthread_create(&data->philo[0].thd_id, NULL, \
+	philo_one_func, &data->philo[0]) != 0)
 	{
 		printf("error : pthread_create");
 		clear_data(data);
 		return ;
 	}
-	pthread_join(data->philosophers[0].thread_id, NULL);
+	pthread_join(data->philo[0].thd_id, NULL);
 	clear_data(data);
 }

@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   clear_data.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spirnaz <spirnaz@student.42kocaeli.com.    +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/02 22:49:22 by spirnaz           #+#    #+#             */
-/*   Updated: 2023/06/02 22:49:24 by spirnaz          ###   ########.fr       */
+/*   Created: 2023/06/02 10:49:22 by abeaugra          #+#    #+#             */
+/*   Updated: 2023/08/24 14:39:58 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosophers.h"
+#include "philo.h"
 
 static void	destroy_mutexes(t_data *data)
 {
 	int	i;
 
 	i = 0;
-	while (i < data->number_of_philosophers)
+	while (i < data->num_philo)
 	{
 		pthread_mutex_destroy(&data->forks[i]);
 		i++;
@@ -31,8 +31,8 @@ static void	free_data(t_data *data)
 {
 	if (data->forks != NULL)
 		free(data->forks);
-	if (data->philosophers != NULL)
-		free(data->philosophers);
+	if (data->philo != NULL)
+		free(data->philo);
 }
 
 void	clear_data(t_data *data)

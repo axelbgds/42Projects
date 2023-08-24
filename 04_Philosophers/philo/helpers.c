@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   helpers.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: spirnaz <spirnaz@student.42kocaeli.com.    +#+  +:+       +#+        */
+/*   By: abeaugra <abeaugra@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/02 22:49:29 by spirnaz           #+#    #+#             */
-/*   Updated: 2023/06/02 22:49:30 by spirnaz          ###   ########.fr       */
+/*   Created: 2023/06/02 10:49:29 by abeaugra          #+#    #+#             */
+/*   Updated: 2023/08/24 14:43:36 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosophers.h"
+#include "philo.h"
 
 int	ft_atoi(char *str)
 {
@@ -41,9 +41,7 @@ int	ft_atoi(char *str)
 	return (result * sign);
 }
 
-/// @brief Şimdi ki zamanı milisaniye (ms) cinsine çevirerek geriye döner.
-/// @return zaman (ms)
-time_t	get_time_milliseconds(void)
+time_t	get_time_ms(void)
 {
 	struct timeval	timeval;
 
@@ -51,7 +49,7 @@ time_t	get_time_milliseconds(void)
 	return (timeval.tv_sec * 1000 + timeval.tv_usec / 1000);
 }
 
-int	print_error(char *message)
+int	print_err(char *message)
 {
 	printf("%s\n", message);
 	return (0);
