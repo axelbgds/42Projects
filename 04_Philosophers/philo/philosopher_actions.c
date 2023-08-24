@@ -6,17 +6,20 @@
 /*   By: abeaugra <abeaugra@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 11:45:03 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/08/24 14:40:54 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/08/24 14:50:17 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
 
-/// @brief Zaman geçirilmesi gereken yerlerde kullanılır.
-/// Filozof, milisaniye (ms) cinsinden belirtilen zaman boyunca duraklatılır.
-/// Uyku sırasında simülasyonun bitip bitmediğini periyodik olarak kontrol eder.
-/// @param data Simülasyonun verilerini tutar.
-/// @param wait_time Filozofun bekletileceği zaman (ms)
+/*
+** Utilisé dans les endroits où le temps doit être passé. 
+** Le philosophe est mis en pause pendant le temps spécifié en millisecondes (ms).
+** Vérifie périodiquement pendant le sommeil si la simulation est terminée ou non.
+** @param data Contient les données de la simulation.
+** @param wait_time Le temps (ms) pendant lequel le philosophe sera en attente.
+*/
+
 void	philo_wait(t_data *data, time_t wait_time)
 {
 	time_t	limit;
