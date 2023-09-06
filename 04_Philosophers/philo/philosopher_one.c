@@ -20,10 +20,10 @@ static void	*philo_one_func(void *void_philosopher)
 	philosopher = (t_philo *)void_philosopher;
 	data = philosopher->data;
 	pthread_mutex_lock(&data->forks[0]);
-	philo_writer(philosopher, "has taken a fork");
+	philo_writer(philosopher, "has taken a fork 🍴 ");
 	pthread_mutex_unlock(&data->forks[0]);
 	philo_wait(data, data->time_to_die);
-	philo_writer(philosopher, "died");
+	philo_writer(philosopher, "died 💀 Amen :🙏" );
 	return (NULL);
 }
 

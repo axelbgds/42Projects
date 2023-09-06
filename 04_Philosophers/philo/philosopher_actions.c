@@ -6,7 +6,7 @@
 /*   By: abeaugra <abeaugra@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 11:45:03 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/08/24 15:00:19 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/09/06 12:50:47 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,11 @@ void	philo_writer(t_philo *philosopher, char *message)
 void	philo_eat(t_data *data, t_philo *philosopher)
 {
 	pthread_mutex_lock(&data->forks[philosopher->lfork_id]);
-	philo_writer(philosopher, "has taken a fork");
+	philo_writer(philosopher, "has taken a fork 🍴 ");
 	pthread_mutex_lock(&data->forks[philosopher->rfork_id]);
-	philo_writer(philosopher, "has taken a fork");
+	philo_writer(philosopher, "has taken a fork 🍴 ");
 	pthread_mutex_lock(&data->is_eating);
-	philo_writer(philosopher, "is eating");
+	philo_writer(philosopher, "is eating 🍝 ");
 	philosopher->last_eating_time = get_time_ms();
 	pthread_mutex_unlock(&data->is_eating);
 	philo_wait(data, data->time_to_eat);
@@ -65,11 +65,11 @@ void	philo_eat(t_data *data, t_philo *philosopher)
 
 void	philo_sleep(t_data *data, t_philo *philosopher)
 {
-	philo_writer(philosopher, "is sleeping");
+	philo_writer(philosopher, "is sleeping 💤 ");
 	philo_wait(data, data->time_to_sleep);
 }
 
 void	philo_think(t_philo *philosopher)
 {
-	philo_writer(philosopher, "is thinking");
+	philo_writer(philosopher, "is thinking 📖 ");
 }

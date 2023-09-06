@@ -60,7 +60,7 @@ static void	catch_death_or_eat(t_data *data)
 		get_time_ms() - data->philo[i].last_eating_time \
 		> data->time_to_die)
 		{
-			philo_writer(&data->philo[i], "died");
+			philo_writer(&data->philo[i], "died 💀 Amen :🙏" );
 			pthread_mutex_lock(&data->death_checker);
 			data->died_philo = 1;
 			pthread_mutex_unlock(&data->death_checker);
@@ -74,6 +74,7 @@ static void	catch_death_or_eat(t_data *data)
 	}
 }
 
+// Add break if one philo is died
 static void	*philo_many_func(void *void_philosopher)
 {
 	t_philo	*philosopher;
@@ -91,7 +92,8 @@ static void	*philo_many_func(void *void_philosopher)
 			pthread_mutex_unlock(&data->death_checker);
 			break ;
 		}
-		pthread_mutex_unlock(&data->death_checker);
+		else
+			pthread_mutex_unlock(&data->death_checker);
 		if (data->philo_must_eat > 0
 			&& philosopher->eating_count >= data->philo_must_eat)
 			break ;
