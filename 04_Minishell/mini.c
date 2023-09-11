@@ -1,2 +1,0 @@
-// Tache pour mini
-
