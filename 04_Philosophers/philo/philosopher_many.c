@@ -74,7 +74,6 @@ static void	catch_death_or_eat(t_data *data)
 	}
 }
 
-// Add break if one philo is died
 static void	*philo_many_func(void *void_philosopher)
 {
 	t_philo	*philosopher;
