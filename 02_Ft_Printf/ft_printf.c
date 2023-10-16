@@ -162,11 +162,11 @@ int ft_printf(const char *s1, ...)
 	return(0);
 }
 
-int main()
-{
-	char ptr[] = "coucou toto";
-	char *toto = "toto";
-	ft_printf	("test %s %s   salut\n",ptr,toto);
-	printf		("test %s %s  salut\n",ptr,toto);
-	return (0);
-}
+// int main()
+// {
+// 	char ptr[] = "coucou toto";
+// 	char *toto = "toto";
+// 	ft_printf	("test %s %s   salut\n",ptr,toto);
+// 	printf		("test %s %s  salut\n",ptr,toto);
+// 	return (0);
+// }
