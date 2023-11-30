@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "mlx_int.h": "c",
+        "cub3d.h": "c",
+        "ipc.h": "c",
+        "stdio.h": "c",
+        "uio.h": "c",
+        "struct.h": "c"
+    }
+}

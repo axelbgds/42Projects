@@ -1,0 +1,24 @@
+Lit le fichier .cub et stocke les chemins des var
+decouper le fichier en deux : info - description
+
+Obligatoire d avoir les 4 textures peuvent etre inverse
+Obligatoire d avoir la map
+Si on arrive pas sur texture et couleur on est sur la map
+
+----------------------------------------
+creer 6 variable pour la map
+si y en une a NULL on renvoi une erreur
+fonction read file plus simple que gnl lire tous le fichier
+
+
+Apres
+fonction put_mlx_pixel la mettre dans srcs pas dans minilibx
+creation image : fonction mlx pour creer une image verifier 
+si elle existe
+
+-----------------------------------------
+
+style reachables 13 bloc =>
+texture_paths
+map
+mlx init
