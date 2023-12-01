@@ -26,6 +26,6 @@ This is a summary of the key projects from the 42 School's curriculum, the skill
 | **Cub3D** | Graphiques | Raycasting | Algorithmes | Intermédiaire | 125 |
 | **Netpractice** | Réseaux | Programmation de sockets | TCP/IP | Intermédiaire | 100 |
 | **Modules C++** | Programmation orientée objet | STL | Modèles | Senior |  |
-| **Inception** | | | | Senior | |
-| **ft_irc** | | | | Senior | |
+| **Inception** | docker | mariaDB | PHP | Senior | |
+| **ft_irc** | C++ | socket | Forum | Senior | |
 | **Transcendence** | Développement full-stack | Base de données | Sécurité web | Senior |  |
