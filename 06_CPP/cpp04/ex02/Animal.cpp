@@ -1,0 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abeaugra <abeaugra@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/17 15:39:42 by abeaugra          #+#    #+#             */
+/*   Updated: 2023/11/22 11:29:30 by abeaugra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Animal.hpp"
+
+Animal::Animal() : _type("Generic Animal") {
+    std::cout << "Animal constructor" << std::endl;
+}
+
+Animal::~Animal() {
+    std::cout << "Animal destructor" << std::endl;
+}
+
+Animal::Animal(const Animal &src) : _type(src._type) {
+    std::cout << "Animal copy constructor" << std::endl;
+}
+
+Animal &Animal::operator=(const Animal &rhs) {
+    this->_type = rhs.getType();
+    std::cout << "Animal copy assignment operator" << std::endl;
+    return *this;
+}
+
+std::string Animal::getType() const {
+    return _type;
+}
