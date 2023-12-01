@@ -15,7 +15,7 @@ This is a summary of the key projects from the 42 School's curriculum, the skill
 | Projet de l'école 42 | Compétence 1 | Compétence 2 | Compétence 3 | Niveau | Note |
 | --- | :---: | :---: | :---: | :---: | --- |
 | **Libft** | Gestion de la mémoire | Création de fonctions | Optimisation | Débutant | 125 |
-| **Ft_printf** | Fonctions variadiques | Formatage | Analyse | Débutant | 100 |
+| **Printf** | Fonctions variadiques | Formatage | Analyse | Débutant | 100 |
 | **Get_next_line** | Variables statiques | Descripteurs de fichiers | Gestion du buffer | Débutant | 125 |
 | **Born2beroot** | Administration système | Configuration réseau | Protocoles de sécurité | Débutant | 110 |
 | **Fractol** | Graphiques | Implémentation d'algorithmes | Gestion des événements | Intermédiaire | 125 |
@@ -27,5 +27,5 @@ This is a summary of the key projects from the 42 School's curriculum, the skill
 | **Netpractice** | Réseaux | Programmation de sockets | TCP/IP | Intermédiaire | 100 |
 | **Modules C++** | Programmation orientée objet | STL | Modèles | Senior |  |
 | **Inception** | docker | mariaDB | PHP | Senior | |
-| **ft_irc** | C++ | socket | Forum | Senior | |
+| **Irc** | C++ | socket | Forum | Senior | |
 | **Transcendence** | Développement full-stack | Base de données | Sécurité web | Senior |  |
