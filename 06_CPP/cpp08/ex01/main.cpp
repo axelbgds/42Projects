@@ -1,73 +1,54 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abeaugra <abeaugra@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/14 10:24:10 by abeaugra          #+#    #+#             */
+/*   Updated: 2023/12/14 12:58:24 by abeaugra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <sys/time.h>
 #include "Span.hpp"
 
-static long	get_time(void)
-{
-	struct timeval	tv;
-
-	gettimeofday(&tv, NULL);
-	return (tv.tv_sec * 10 + tv.tv_usec / 10);
+int randNumber(int max) {
+    return rand() % max + 1; // Utilisez rand() pour obtenir un nombre aléatoire
 }
 
-int	main(void)
-{
-	Span	test(10000);
-	Span	test2(3);
-	Span	test3(10);
-	srand(time(NULL));
-	for(unsigned int i = 0; i < 10010; i++)
-		test.addNumber(rand()%100000);
-	for(unsigned int i = 0; i < 5; i++)
-		test2.addNumber(rand()%100000);
-	test3.addNumber(1);
-	try
-	{std::cout << "Shortest Span : " << test.shortestSpan() << std::endl;}
-	catch(const std::exception& e)
-	{std::cout << "Not enough element to call the function" << std::endl;}
-	try
-	{std::cout << "Longest Span : " << test.longestSpan() << std::endl;}
-	catch(const std::exception& e)
-	{std::cout << "Not enough element to call the function" << std::endl;}
-	try
-	{std::cout << "Shortest Span 2 : " << test2.shortestSpan() << std::endl;}
-	catch(const std::exception& e)
-	{std::cout << "Not enough element to call the function" << std::endl;}
-	try
-	{std::cout << "Longest Span 2 : " << test2.longestSpan() << std::endl;}
-	catch(const std::exception& e)
-	{std::cout << "Not enough element to call the function" << std::endl;}
-	try
-	{std::cout << "Shortest Span 3 : " << test3.shortestSpan() << std::endl;}
-	catch(const std::exception& e)
-	{std::cout << "Not enough element to call the function" << std::endl;}
-	try
-	{std::cout << "Longest Span 3 : " << test3.longestSpan() << std::endl;}
-	catch(const std::exception& e)
-	{std::cout << "Not enough element to call the function" << std::endl;}
-	try
-	{test3.addMore(test2.getVect());}
-	catch(const std::exception& e)
-	{std::cout << " Can't add vector because of overflow" << std::endl;}
-	try
-	{test3.addMore(test2.getVect());}
-	catch(const std::exception& e)
-	{std::cout << " Can't add vector because of overflow" << std::endl;}
-	try
-	{test3.addMore(test2.getVect());}
-	catch(const std::exception& e)
-	{std::cout << " Can't add vector because of overflow" << std::endl;}
-	try
-	{test3.addMore(test2.getVect());}
-	catch(const std::exception& e)
-	{std::cout << " Can't add vector because of overflow" << std::endl;}
-	try
-	{std::cout << "Shortest Span 3 : " << test3.shortestSpan() << std::endl;}
-	catch(const std::exception& e)
-	{std::cout << "Not enough element to call the function" << std::endl;}
-	try
-	{std::cout << "Longest Span 3 : " << test3.longestSpan() << std::endl;}
-	catch(const std::exception& e)
-	{std::cout << "Not enough element to call the function" << std::endl;}	
+int main() {
+    srand(static_cast<unsigned int>(time(0)));
+
+    try {
+        // Test 1
+        Span test(100);
+
+        // Ajoutez les mêmes nombres que dans votre exemple
+        int test1DataArray[] = {6, 3, 17, 9, 11};
+        std::vector<int> test1Data(test1DataArray, test1DataArray + sizeof(test1DataArray) / sizeof(int));
+        test.addMore(test1Data.begin(), test1Data.end());
+
+        std::cout << "TEST 1: \n";
+        test.printNumbers();  // Affichez les nombres pour vérification
+        std::cout << "Shortest Span 1: " << test.shortestSpan() << std::endl;
+        std::cout << "Longest Span 1: " << test.longestSpan() << std::endl;
+
+        // Test 2
+        std::vector<int> vecToAdd;
+        vecToAdd.push_back(randNumber(5));
+        vecToAdd.push_back(randNumber(5));
+
+        Span test2(3);
+        test2.addMore(vecToAdd.begin(), vecToAdd.end());
+        std::cout << "TEST 2: \n";
+        test2.printNumbers();
+        std::cout << "Shortest Span 2: " << test2.shortestSpan() << std::endl;
+        std::cout << "Longest Span 2: " << test2.longestSpan() << std::endl;
+
+    } catch (const std::exception& e) {
+        std::cout << "Error: " << e.what() << std::endl;
+    }
+
+    return 0;
 }
 

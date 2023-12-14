@@ -1,69 +1,77 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Span.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abeaugra <abeaugra@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/14 10:24:17 by abeaugra          #+#    #+#             */
+/*   Updated: 2023/12/14 12:57:57 by abeaugra         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Span.hpp"
 
-Span::Span(){}
-
-Span::Span(unsigned int i) : _size(i){}
-
-Span::~Span(){}
-
-Span::Span(const Span& src){
-	vect = src.vect;
-	*this = src;}
-
-
-Span&	Span::operator=(const Span src){
-	vect = src.vect;
-	return (*this);}
-
-void	Span::addNumber(int number)
-{
-	if (vect.size() < _size)
-		{vect.push_back(number);}
-	else
-		std::cout << "Error, can't add " << number << " in the array" << std::endl;
+Span::Span(unsigned int i) : _size(i) {
 }
 
-void	Span::addMore(std::vector<int> vecto)
-{
-	if (vect.size() + vecto.size() > _size)
-		throw(std::exception());
-	else
-		vect.insert(vect.end(), vecto.begin(), vecto.end());
+Span::~Span() {}
+
+Span::Span(const Span& src) {
+    vect = src.vect;
+    _size = src._size;
 }
 
-int		Span::longestSpan()
-{
-	unsigned int i = 0;
-	if (vect.size() > 1)
-	{
-		for (i < vect.size() && vect.at(i); i++;);
-		std::sort(vect.begin(), vect.end());
-		return(std::max(*vect.end() - *vect.begin(), *vect.end() + *vect.begin()));
-	}
-	throw(std::exception());
-	return (0);
+Span& Span::operator=(const Span& src) {
+    if (this != &src) {
+        vect = src.vect;
+        _size = src._size;
+    }
+    return *this;
 }
 
-int		Span::shortestSpan()
-{
-	if (vect.size() > 1)
-	{
-		unsigned int i = 0;
-		std::vector<int>::iterator	it = vect.begin();
-		std::sort(vect.begin(), vect.end());
-		i = *(it + 1 ) - *it;
-		while(it + 1 != vect.end())
-		{
-			if (*(it + 1 ) - *(it) < i)
-				i = *(it + 1 ) - *it;
-			it++;
-		}
-		return (i);
-	}
-	throw(std::exception());
-	return (0);
+void Span::printNumbers() const {
+    std::cout << "Container vector contains the following numbers: ";
+    for (std::vector<int>::const_iterator it = vect.begin(); it != vect.end(); ++it) {
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
 }
 
-std::vector<int>	Span::getVect()
-{return vect;}
+void Span::addNumber(int number) {
+    if (vect.size() < _size)
+        vect.push_back(number);
+    else
+        throw std::runtime_error("Error: can't add number more elements to the array");
+}
+
+void Span::addMore(std::vector<int>::iterator begin, std::vector<int>::iterator end) {
+    if (vect.size() + std::distance(begin, end) > _size)
+        throw std::runtime_error("Error: can't add more elements to the array");
+    else
+        vect.insert(vect.end(), begin, end);
+}
+
+int Span::longestSpan() {
+    if (vect.size() > 1) {
+        std::sort(vect.begin(), vect.end());
+        return *vect.rbegin() - *vect.begin();
+    }
+    throw std::runtime_error("Error: not enough elements to call the function");
+}
+
+int Span::shortestSpan() {
+    if (vect.size() > 1) {
+        std::sort(vect.begin(), vect.end());
+        int minSpan = INT_MAX;  // Utilisez INT_MAX au lieu de std::numeric_limits<int>::max()
+        for (std::vector<int>::iterator it = vect.begin(); it != vect.end() - 1; ++it) {
+            minSpan = std::min(minSpan, *(it + 1) - *it);
+        }
+        return minSpan;
+    }
+    throw std::runtime_error("Error: not enough elements to call the function");
+}
+
+std::vector<int> Span::getVect() const {
+    return vect;
+}

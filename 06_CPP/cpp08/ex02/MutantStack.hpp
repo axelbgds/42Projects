@@ -19,6 +19,7 @@ class MutantStack : public std::stack<T>
 		MutantStack() : stack(){}
         MutantStack(const stack &src) : stack(src){}
         ~MutantStack(){}
+        
         stack &operator=(const stack &src)
         {
             if (*this != src)
