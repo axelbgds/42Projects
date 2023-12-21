@@ -6,7 +6,7 @@
 /*   By: abeaugra <abeaugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 09:00:02 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/12/12 09:56:22 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/12/13 10:52:25 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ std::ostream & operator<<(std::ostream & o, const Awesome &a) { o << a.get_n(); 
 int main(void)
 {
         Awesome a(2), b(4);
-
+        std::cout << "temp a = " << a << " " << "temp b = " << b << std::endl;
         ::swap(a, b);
-        std::cout << a << " " << b << std::endl;
-        std::cout << max(a, b) << std::endl;
-        std::cout << min(a, b) << std::endl;
+        std::cout << "swap temp a = " << a << " " << "temp b = " << b << std::endl;
+        std::cout << "max temp a et b = " << max(a, b) << std::endl;
+        std::cout << "min temp a et b = " << min(a, b) << std::endl;
         return (0);
 }

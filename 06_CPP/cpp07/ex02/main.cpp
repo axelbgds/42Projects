@@ -6,61 +6,53 @@
 /*   By: abeaugra <abeaugra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 09:55:19 by abeaugra          #+#    #+#             */
-/*   Updated: 2023/12/12 09:58:32 by abeaugra         ###   ########.fr       */
+/*   Updated: 2023/12/13 11:12:27 by abeaugra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <iomanip>
-#include <cmath>
 #include "Array.hpp"
 
-#define MAX_VAL 750
-int main(int, char**)
-{
-    Array<int> numbers(MAX_VAL);
-    int* mirror = new int[MAX_VAL];
-    srand(time(NULL));
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        const int value = rand();
-        numbers[i] = value;
-        mirror[i] = value;
-    }
-    //SCOPE 
-    {
-        Array<int> tmp = numbers;
-        Array<int> test(tmp);
-    }
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        if (mirror[i] != numbers[i])
-        {
-            std::cerr << "didn't save the same value!!" << std::endl;
-            return 1;
-        }
-    }
-    try
-    {
-        numbers[-2] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    try
-    {
-        numbers[MAX_VAL] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
+// Test with a custom class
+class YourType {
+public:
+    YourType() : data(0) {}  // Ajout du constructeur par défaut
+    YourType(int value) : data(value) {}
+    int getData() const { return data; }
+private:
+    int data;
+};
+
+int main() {
+    // Test the Array class
+    Array<int> intArray(5);
+
+    for (unsigned int i = 0; i < intArray.size(); ++i) {
+        intArray[i] = i * 2;
     }
 
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        numbers[i] = rand();
+    // Access elements using the subscript operator
+    for (unsigned int i = 0; i < intArray.size(); ++i) {
+        std::cout << intArray[i] << " ";
     }
-    delete [] mirror;//                                                                                                         
+
+    std::cout << "\nArray size: " << intArray.size() << std::endl;
+
+    // Create an Array of YourType
+    Array<YourType> yourTypeArray(3);
+
+    // Initialize elements with instances of YourType
+    yourTypeArray[0] = YourType(10);
+    yourTypeArray[1] = YourType(20);
+    yourTypeArray[2] = YourType(30);
+
+    // Access and print elements
+    for (unsigned int i = 0; i < yourTypeArray.size(); ++i) {
+        std::cout << yourTypeArray[i].getData() << " ";
+    }
+
+    std::cout << "\nArray size: " << yourTypeArray.size() << std::endl;
+
     return 0;
 }
+
