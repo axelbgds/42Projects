@@ -27,5 +27,5 @@ This is a summary of the key projects from the 42 School's curriculum, the skill
 | **Netpractice** | Réseaux | Programmation de sockets | TCP/IP | Intermédiaire | 100 |
 | **Modules C++** | Programmation orientée objet | STL | Modèles | Senior |  |
 | **Inception** | docker | mariaDB | PHP | Senior | |
-| **Irc** | C++ | socket | Forum | Senior | |
+| **Irc** | C++ | socket | Forum | Senior | 100 |
 | **Transcendence** | Développement full-stack | Base de données | Sécurité web | Senior |  |
