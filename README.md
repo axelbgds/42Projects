@@ -25,7 +25,7 @@ This is a summary of the key projects from the 42 School's curriculum, the skill
 | **Minishell** | Création de processus | Gestion des signaux | Programmation shell | Intermédiaire | 101 |
 | **Cub3D** | Graphiques | Raycasting | Algorithmes | Intermédiaire | 125 |
 | **Netpractice** | Réseaux | Programmation de sockets | TCP/IP | Intermédiaire | 100 |
-| **Modules C++** | Programmation orientée objet | STL | Modèles | Senior |  |
-| **Inception** | docker | mariaDB | PHP | Senior | |
+| **Modules C++** | Programmation orientée objet | STL | Modèles | Senior | 100 |
+| **Inception** | docker | mariaDB | PHP | Senior | 105 |
 | **Irc** | C++ | socket | Forum | Senior | 100 |
 | **Transcendence** | Développement full-stack | Base de données | Sécurité web | Senior |  |
